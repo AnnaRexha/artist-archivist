@@ -58,3 +58,54 @@ body {
   margin-top: 0.5rem;
 }
 
+/* FLIP CARD (ZINE STYLE) */
+.flip-card {
+  perspective: 1000px;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner,
+.flip-card:focus-within .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.flip-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-back {
+  background-color: #fcf9f3;
+  color: #2e1f14;
+  transform: rotateY(180deg);
+  padding: 2rem;
+  font-family: 'Georgia', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
