@@ -1,7 +1,6 @@
-
-document.querySelector("a[href='#about']").addEventListener("click", function(e) {
-  e.preventDefault();
-  document.getElementById("about").scrollIntoView({
-    behavior: "smooth"
+document.getElementById("searchBox").addEventListener("input", function (e) {
+  const term = e.target.value.toLowerCase();
+  document.querySelectorAll(".entry").forEach(entry => {
+    entry.style.display = entry.innerText.toLowerCase().includes(term) ? "block" : "none";
   });
 });
