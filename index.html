@@ -11,26 +11,20 @@
 
   <header class="topbar">
     <nav class="navbar">
-      <a href="#about">About</a>
+      <a href="about.html">About Galerie des Archives</a> <!-- Link to About page -->
       <input type="text" id="searchBox" placeholder="Recherche...">
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <div class="hero">
     <h1>Voices</h1>
     <p class="intro">An evolving archive of voices, resistance, and memory.</p>
   </div>
 
+  <!-- Archive Section -->
   <div class="archive">
-    <div class="entry">
-      <h2>“Étrangère.”</h2>
-      <p>Une histoire en kosovar.</p>
-      <audio controls>
-        <source src="audio/audio1.mp3" type="audio/mp3" />
-        Your browser does not support the audio element.
-      </audio>
-    </div>
-
+    <!-- Flip Card Entry (Zine Style) -->
     <div class="entry flip-card">
       <div class="flip-inner">
         <div class="flip-front">
@@ -39,43 +33,16 @@
         <div class="flip-back">
           <div class="story-content">
             <h3 class="story-title">Samedi, 31 décembre 2022</h3>
-            <p>
-              Ce soir, je suis seule... (text snipped for brevity)
-              <br><br>— Dh. R.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="entry flip-card">
-      <div class="flip-inner">
-        <div class="flip-front">
-          <img src="images/photo2.jpg" alt="Collage Art">
-        </div>
-        <div class="flip-back">
-          <div class="story-content">
-            <h3 class="story-title">Dimanche, 5 février 2023</h3>
-            <p>Elle a raconté son histoire avec des silences...</p>
+            <p>...</p>
             <audio controls>
-              <source src="audio/audio2.mp3" type="audio/mp3">
-              Votre navigateur ne supporte pas cet élément.
+              <source src="audio/audio1.mp3" type="audio/mp3" />
+              Your browser does not support the audio element.
             </audio>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="entry">
-      <img src="images/photo4.jpg" alt="Collage Art" />
-      <p class="caption">"Soft Rage", collage by anonymous contributor</p>
-    </div>
   </div>
-
-  <section id="about" class="about hidden">
-    <h2>Sur la Galerie des Archives</h2>
-    <p>La Galerie des Archives est un espace vivant de mémoire, d'art et de résistance...</p>
-  </section>
 
   <script src="scripts.js"></script>
 </body>
