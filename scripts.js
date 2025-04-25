@@ -5,3 +5,7 @@ document.getElementById("searchBox").addEventListener("input", function (e) {
     entry.style.display = entry.innerText.toLowerCase().includes(term) ? "block" : "none";
   });
 });
+
+document.querySelector(".about-link").addEventListener("click", function() {
+  document.querySelector("#about").classList.remove("hidden");
+});
