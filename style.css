@@ -183,3 +183,18 @@ body {
 .overlay {
   display: none;
 }
+
+.back-button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.back-button:hover {
+  background-color: #333;
+}
