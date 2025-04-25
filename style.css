@@ -2,25 +2,21 @@
 body {
   background: url(images/background1.jpg) center/cover no-repeat fixed;
   color: #1c1c1c;
-  font-family: 'Georgia', serif; /* Minimalist, formal font */
+  font-family: 'Georgia', serif; /* Formal, minimal font */
   margin: 0;
   padding: 0;
 }
 
-/* Remove the overlay that was causing issues */
-.overlay {
-  display: none; /* Removed the overlay */
-}
-
-/* Thinner top bar, black background */
+/* Topbar Styling */
 .topbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #000; /* Black color */
+  background-color: #000; /* Black background for top bar */
+  color: #fff; /* White text in the top bar */
   z-index: 10;
-  padding: 0.5rem 2rem; /* Thinner bar */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .navbar {
@@ -30,9 +26,10 @@ body {
 }
 
 .navbar a {
-  font-family: 'Georgia', serif; /* Formal, clean font */
-  font-size: 1.2rem;
-  color: #fff; /* White text on black background */
+  font-family: 'Georgia', serif; /* Minimal and formal font */
+  font-size: 1.5rem;
+  text-transform: uppercase; /* All caps */
+  color: #fff; /* White text for the links */
   text-decoration: none;
   margin-right: 1rem;
 }
@@ -41,9 +38,10 @@ body {
   padding: 0.5rem;
   border-radius: 4px;
   border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.3); /* Transparent white search box */
 }
 
-/* Hero section styling */
+/* Hero Section Styling */
 .hero {
   background: url(images/background1.jpg) center/cover;
   text-align: center;
@@ -64,35 +62,50 @@ body {
   margin: auto;
 }
 
-/* Archive and mosaic grid styling for images */
+/* Grid Layout for Entries (Mosaic Style) */
 .archive {
   padding: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
-  gap: 1.5rem;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   max-width: 1000px;
   margin: auto;
 }
 
-/* Entry items */
 .entry {
   background: #fffef9;
   padding: 1.5rem;
   border: 1px solid #e1dcd2;
-  border-radius: 12px;
+  border-radius: 0; /* No rounded corners */
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
 }
 
-/* Prevent image changes like cropping or rounded corners */
+.entry h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.entry audio,
 .entry img {
   width: 100%;
-  height: auto; /* Keep original aspect ratio */
-  object-fit: contain; /* Ensure the whole image is visible */
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
-/* Flip Card styling (Black background instead of beige) */
+.entry img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* No cropping of images */
+  border: none; /* Remove the border */
+  box-shadow: 0px 0px 0px rgba(0,0,0,0); /* Remove box-shadow */
+}
+
+.caption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* FLIP CARD (ZINE STYLE) */
 .flip-card {
   perspective: 1000px;
   width: 100%;
@@ -103,7 +116,7 @@ body {
 .flip-inner {
   position: relative;
   width: 100%;
-  height: 400px; /* Adjusted height */
+  height: 400px; /* Increased height */
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
@@ -120,7 +133,7 @@ body {
   backface-visibility: hidden;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
 .flip-front img {
@@ -130,11 +143,11 @@ body {
 }
 
 .flip-back {
-  background-color: #000; /* Black color */
-  color: #fff; /* White text for readability */
+  background-color: #000; /* Black flip-back background */
+  color: #fff; /* White text */
   transform: rotateY(180deg);
   padding: 1rem;
-  font-family: 'Georgia', serif; /* Formal, minimal font */
+  font-family: 'Georgia', serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -153,23 +166,16 @@ body {
   margin-bottom: 1rem;
   font-size: 1.2rem;
   font-weight: bold;
-  color: #fff; /* White text */
+  font-family: 'Georgia', serif;
+  color: #fff;
 }
 
-/* About Page Flip Card Styling (Image centered on the page) */
-.about-page {
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Full screen */
-  background-color: #f9f9f9;
-}
-
+/* About Section Styling */
 .about-flip-card {
   perspective: 1000px;
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
+  margin: auto;
 }
 
 .about-flip-inner {
@@ -190,9 +196,8 @@ body {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
 .about-flip-front img {
@@ -202,8 +207,8 @@ body {
 }
 
 .about-flip-back {
-  background-color: #000; /* Black background */
-  color: #fff; /* White text */
+  background-color: #000;
+  color: #fff;
   transform: rotateY(180deg);
   padding: 2rem;
   font-family: 'Georgia', serif;
@@ -211,4 +216,29 @@ body {
   justify-content: center;
   align-items: center;
   text-align: left;
+}
+
+.about-story-content {
+  max-height: 100%;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.about-story-title {
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+#about {
+  display: block;
+  text-align: center;
+  padding: 2rem;
+}
+
+#about p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #fff;
 }
