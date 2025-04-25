@@ -1,21 +1,71 @@
-body {
-  background: url(images/background1.jpg) center/cover no-repeat fixed;
-  color: #1c1c1c;
-  font-family: 'Georgia', serif;
+/* Reset and base styles */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(images/background1.jpg) center/cover no-repeat fixed;
+  font-family: 'Georgia', serif;
+  color: #1c1c1c;
+  line-height: 1.6;
+}
+
+/* Topbar Styles */
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000;
+  z-index: 100;
+  padding: 0.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+.navbar .title {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+#searchBox {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+  background: rgba(255, 255, 255, 0.3);
+  color: #000;
+  border-radius: 4px;
+  width: 160px;
 }
 
 .hero {
+  padding: 6rem 1rem 2rem;
   text-align: center;
-  padding: 4rem 1rem;
   color: #2e1f14;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  letter-spacing: 1px;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
 }
 
 .intro {
@@ -23,45 +73,40 @@ body {
   font-size: 1.2rem;
   max-width: 600px;
   margin: auto;
+  color: #2e1f14;
 }
 
 .archive {
   padding: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
   max-width: 1200px;
   margin: auto;
 }
 
 .entry {
-  background: transparent;
+  position: relative;
+  background: none;
   padding: 0;
   border: none;
+  border-radius: 0;
   box-shadow: none;
 }
 
 .entry img {
   width: 100%;
   height: auto;
+  display: block;
   object-fit: contain;
-  margin-bottom: 1rem;
-  border: none;
   border-radius: 0;
-  box-shadow: none;
 }
 
-.caption {
-  font-size: 0.9rem;
-  color: #555;
-  margin-top: 0.5rem;
-}
-
-/* FLIP CARD (ZINE STYLE) */
+/* Flip Card (Zine Style) */
 .flip-card {
   perspective: 1000px;
   width: 100%;
-  max-width: 500px;
+  max-width: 100%;
   margin: auto;
 }
 
@@ -83,10 +128,7 @@ body {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border: none;
-  border-radius: 0;
   overflow: hidden;
-  box-shadow: none;
 }
 
 .flip-front img {
@@ -100,7 +142,6 @@ body {
   color: #fff;
   transform: rotateY(180deg);
   padding: 2rem;
-  font-family: 'Georgia', serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,56 +160,26 @@ body {
 .story-title {
   text-align: right;
   margin-bottom: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
-  font-family: 'Georgia', serif;
   color: #fff;
 }
 
-.topbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #000;
-  z-index: 100;
-  padding: 0.5rem 2rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+/* About Page Styles */
+.about-container {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  height: 50px;
+  height: 100vh;
+  padding-top: 5rem;
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
-  width: 100%;
+.about-flip {
+  width: 90%;
+  max-width: 600px;
 }
 
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  margin-right: auto;
-  font-family: 'Georgia', serif;
-  font-size: 1rem;
-}
-
-.site-title {
-  flex: 1;
-  text-align: center;
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  font-family: 'Georgia', serif;
-  text-transform: uppercase;
-}
-
-#searchBox {
-  padding: 0.5rem;
-  border-radius: 4px;
-  border: 1px solid #fff;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: #000;
-  font-size: 0.9rem;
+/* Hide overlay */
+.overlay {
+  display: none;
 }
