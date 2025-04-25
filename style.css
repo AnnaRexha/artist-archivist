@@ -8,6 +8,10 @@
   text-transform: uppercase; /* All caps */
 }
 
+.overlay {
+  display: none; /* hide the overlay */
+}
+
 /* Back Button Styling */
 .back-button {
   background-color: #000;
