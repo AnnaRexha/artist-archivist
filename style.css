@@ -1,49 +1,12 @@
-/* Overall page styling */
 body {
   background: url(images/background1.jpg) center/cover no-repeat fixed;
   color: #1c1c1c;
-  font-family: 'Georgia', serif; /* Formal, minimal font */
+  font-family: 'Georgia', serif;
   margin: 0;
   padding: 0;
 }
 
-/* Topbar Styling */
-.topbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #000; /* Black background for top bar */
-  color: #fff; /* White text in the top bar */
-  z-index: 10;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar a {
-  font-family: 'Georgia', serif; /* Minimal and formal font */
-  font-size: 1.5rem;
-  text-transform: uppercase; /* All caps */
-  color: #fff; /* White text for the links */
-  text-decoration: none;
-  margin-right: 1rem;
-}
-
-#searchBox {
-  padding: 0.5rem;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background-color: rgba(255, 255, 255, 0.3); /* Transparent white search box */
-}
-
-/* Hero Section Styling */
 .hero {
-  background: url(images/background1.jpg) center/cover;
   text-align: center;
   padding: 4rem 1rem;
   color: #2e1f14;
@@ -62,41 +25,30 @@ body {
   margin: auto;
 }
 
-/* Grid Layout for Entries (Mosaic Style) */
 .archive {
   padding: 2rem;
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
 }
 
 .entry {
-  background: #fffef9;
-  padding: 1.5rem;
-  border: 1px solid #e1dcd2;
-  border-radius: 0; /* No rounded corners */
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-.entry h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.entry audio,
-.entry img {
-  width: 100%;
-  margin-top: 1rem;
+  background: transparent;
+  padding: 0;
+  border: none;
+  box-shadow: none;
 }
 
 .entry img {
   width: 100%;
   height: auto;
-  object-fit: cover; /* No cropping of images */
-  border: none; /* Remove the border */
-  box-shadow: 0px 0px 0px rgba(0,0,0,0); /* Remove box-shadow */
+  object-fit: contain;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .caption {
@@ -116,7 +68,7 @@ body {
 .flip-inner {
   position: relative;
   width: 100%;
-  height: 400px; /* Increased height */
+  height: 100%;
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
@@ -131,27 +83,30 @@ body {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border-radius: 12px;
+  border: none;
+  border-radius: 0;
   overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  box-shadow: none;
 }
 
 .flip-front img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .flip-back {
-  background-color: #000; /* Black flip-back background */
-  color: #fff; /* White text */
+  background-color: #000;
+  color: #fff;
   transform: rotateY(180deg);
-  padding: 1rem;
+  padding: 2rem;
   font-family: 'Georgia', serif;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: left;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .story-content {
@@ -170,75 +125,50 @@ body {
   color: #fff;
 }
 
-/* About Section Styling */
-.about-flip-card {
-  perspective: 1000px;
+.topbar {
+  position: fixed;
+  top: 0;
   width: 100%;
-  max-width: 800px;
-  margin: auto;
-}
-
-.about-flip-inner {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.about-flip-card:hover .about-flip-inner,
-.about-flip-card:focus-within .about-flip-inner {
-  transform: rotateY(180deg);
-}
-
-.about-flip-front, .about-flip-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-.about-flip-front img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.about-flip-back {
   background-color: #000;
-  color: #fff;
-  transform: rotateY(180deg);
-  padding: 2rem;
-  font-family: 'Georgia', serif;
+  z-index: 100;
+  padding: 0.5rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: left;
+  justify-content: space-between;
+  height: 50px;
 }
 
-.about-story-content {
-  max-height: 100%;
-  overflow-y: auto;
+.navbar {
+  display: flex;
+  align-items: center;
   width: 100%;
 }
 
-.about-story-title {
-  text-align: right;
-  font-size: 1.5rem;
-  font-weight: bold;
+.navbar a {
   color: #fff;
-}
-
-#about {
-  display: block;
-  text-align: center;
-  padding: 2rem;
-}
-
-#about p {
-  margin-top: 1rem;
+  text-decoration: none;
+  margin-right: auto;
+  font-family: 'Georgia', serif;
   font-size: 1rem;
+}
+
+.site-title {
+  flex: 1;
+  text-align: center;
   color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-family: 'Georgia', serif;
+  text-transform: uppercase;
+}
+
+#searchBox {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+  font-size: 0.9rem;
 }
