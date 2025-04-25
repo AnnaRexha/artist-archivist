@@ -1,187 +1,73 @@
-/* Reset and base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galerie des Archives</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="overlay"></div>
 
-body {
-  background: url(images/background1.jpg) center/cover no-repeat fixed;
-  font-family: 'Georgia', serif;
-  color: #1c1c1c;
-  line-height: 1.6;
-}
+  <!-- Topbar (Fixed at the top) -->
+  <header class="topbar">
+    <nav class="navbar">
+      <a href="about.html" class="about-link">About Galerie des Archives</a>
+      <div class="title">Galerie des Archives</div>
+      <input type="text" id="searchBox" placeholder="Recherche...">
+    </nav>
+  </header>
 
-/* Topbar Styles */
-.topbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #000;
-  z-index: 100;
-  padding: 0.8rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  <div class="hero">
+    <h1>Voices</h1>
+    <p class="intro">An evolving archive of voices, resistance, and memory.</p>
+  </div>
 
-.navbar {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between;
-}
+  <div class="archive">
+    <!-- Example of the Flip Card Entry -->
+    <div class="entry flip-card">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <img src="images/photo1.jpg" alt="Collage Art">
+        </div>
+        <div class="flip-back">
+          <div class="story-content">
+            <h3 class="story-title">Samedi, 31 décembre 2022</h3>
+            <p>
+              <!-- Story text goes here -->
+              Your story text goes here...
+            </p>
+            <audio controls>
+              <source src="audio/audio1.mp3" type="audio/mp3" />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- More flip cards can go here -->
+  </div>
 
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
-  margin-right: 1rem;
-}
+  <!-- About Page -->
+  <section id="about" class="about-container hidden">
+    <div class="about-flip flip-card">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <img src="images/about-image.jpg" alt="About Image">
+        </div>
+        <div class="flip-back">
+          <div class="story-content">
+            <h3 class="story-title">About the Galerie des Archives</h3>
+            <p>
+              <!-- About text goes here -->
+              This is the text for the about page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-.navbar .title {
-  flex: 1;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: #fff;
-  letter-spacing: 1px;
-}
-
-#searchBox {
-  padding: 0.4rem 0.8rem;
-  border: 1px solid #ccc;
-  background: rgba(255, 255, 255, 0.3);
-  color: #000;
-  border-radius: 4px;
-  width: 160px;
-}
-
-.hero {
-  padding: 6rem 1rem 2rem;
-  text-align: center;
-  color: #2e1f14;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-}
-
-.intro {
-  font-style: italic;
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: auto;
-  color: #2e1f14;
-}
-
-.archive {
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.entry {
-  position: relative;
-  background: none;
-  padding: 0;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.entry img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  border-radius: 0;
-}
-
-<a href="about.html">About Galerie des Archives</a>
-
-/* Flip Card (Zine Style) */
-.flip-card {
-  perspective: 1000px;
-  width: 100%;
-  max-width: 100%;
-  margin: auto;
-}
-
-.flip-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-inner,
-.flip-card:focus-within .flip-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-front, .flip-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  overflow: hidden;
-}
-
-.flip-front img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-.flip-back {
-  background-color: #000;
-  color: #fff;
-  transform: rotateY(180deg);
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.story-content {
-  max-height: 100%;
-  overflow-y: auto;
-  padding: 1rem;
-  width: 100%;
-}
-
-.story-title {
-  text-align: right;
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #fff;
-}
-
-/* About Page Styles */
-.about-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding-top: 5rem;
-}
-
-.about-flip {
-  width: 90%;
-  max-width: 600px;
-}
-
-/* Hide overlay */
-.overlay {
-  display: none;
-}
+  <script src="script.js"></script>
+</body>
+</html>
