@@ -15,7 +15,7 @@ body {
 }
 
 .hero {
-  background: url('images/textured-bg.jpg') center/cover;
+  background: url(images/background1.jpg) center/cover;
   text-align: center;
   padding: 4rem 1rem;
   color: #2e1f14;
