@@ -1,120 +1,45 @@
-/* Reset and base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background: url(images/background1.jpg) center/cover no-repeat fixed;
-  font-family: 'Georgia', serif;
-  color: #1c1c1c;
-  line-height: 1.6;
-}
-
-/* Topbar Styles */
-.topbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #000;
-  z-index: 100;
-  padding: 0.8rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
-  margin-right: 1rem;
-}
-
+/* Ensure Title is in All Caps */
 .navbar .title {
-  flex: 1;
   text-align: center;
   font-weight: bold;
   font-size: 1.2rem;
   color: #fff;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: uppercase; /* All caps */
 }
 
-#searchBox {
-  padding: 0.4rem 0.8rem;
-  border: 1px solid #ccc;
-  background: rgba(255, 255, 255, 0.3);
-  color: #000;
-  border-radius: 4px;
-  width: 160px;
+/* Back Button Styling */
+.back-button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
 }
 
-.hero {
-  padding: 6rem 1rem 2rem;
-  text-align: center;
-  color: #2e1f14;
+.back-button:hover {
+  background-color: #333;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-}
-
-.intro {
-  font-style: italic;
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: auto;
-  color: #2e1f14;
-}
-
-.archive {
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.entry {
-  position: relative;
-  background: none;
-  padding: 0;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.entry img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  border-radius: 0;
-}
-
-/* Flip Card (Zine Style) */
+/* Flip Card Styles */
 .flip-card {
   perspective: 1000px;
-  width: 100%;
-  max-width: 100%;
+  width: 90%;
+  max-width: 600px;
   margin: auto;
 }
 
 .flip-inner {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 400px; /* Or whatever height fits */
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
@@ -134,8 +59,8 @@ body {
 
 .flip-front img {
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
 }
 
 .flip-back {
@@ -147,55 +72,16 @@ body {
   justify-content: center;
   align-items: center;
   text-align: left;
-  font-size: 1rem;
-  line-height: 1.5;
 }
 
 .story-content {
-  max-height: 100%;
-  overflow-y: auto;
   padding: 1rem;
-  width: 100%;
 }
 
 .story-title {
-  text-align: right;
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: #fff;
+  margin-bottom: 1rem;
 }
 
-/* About Page Styles */
-.about-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding-top: 5rem;
-}
-
-.about-flip {
-  width: 90%;
-  max-width: 600px;
-}
-
-/* Hide overlay */
-.overlay {
-  display: none;
-}
-
-.back-button {
-  background-color: #000;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-size: 1rem;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 20px;
-}
-
-.back-button:hover {
-  background-color: #333;
-}
