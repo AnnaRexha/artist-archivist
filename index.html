@@ -3,44 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galerie des Archives</title>
+  <title>GALERIE DES ARCHIVES</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header class="topbar">
     <nav class="navbar">
-      <a href="about.html">About Galerie des Archives</a> <!-- Link to About page -->
+      <a href="#" class="nav-link">About</a>
+      <h1 class="site-title">GALERIE DES ARCHIVES</h1>
       <input type="text" id="searchBox" placeholder="Recherche...">
     </nav>
   </header>
 
-  <div class="hero">
-    <h1>Voices</h1>
-    <p class="intro">An evolving archive of voices, resistance, and memory.</p>
-  </div>
+  <main>
+    <div class="archive">
+      <!-- Entry with Audio -->
+      <div class="entry">
+        <img src="images/photo1.jpg" alt="Collage Art">
+        <audio controls>
+          <source src="audio/audio1.mp3" type="audio/mp3">
+        </audio>
+      </div>
 
-  <div class="archive">
-    <div class="entry flip-card">
-      <div class="flip-inner">
-        <div class="flip-front">
-          <img src="images/photo1.jpg" alt="Collage Art">
-        </div>
-        <div class="flip-back">
-          <div class="story-content">
-            <h3 class="story-title">Samedi, 31 décembre 2022</h3>
-            <p>...</p>
-            <audio controls>
-              <source src="audio/audio1.mp3" type="audio/mp3" />
-              Your browser does not support the audio element.
-            </audio>
+      <!-- Flip Card Entry (Text) -->
+      <div class="entry flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <img src="images/photo2.jpg" alt="Collage Art">
+          </div>
+          <div class="flip-back">
+            <div class="story-content">
+              <h3 class="story-title">31 DÉCEMBRE 2022</h3>
+              <p>Ce soir, je suis seule... <br><br> — Dh. R.</p>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- Flip Card Entry (About Page) -->
+      <div class="entry flip-card about-entry" id="aboutSection">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <img src="images/photo-about.jpg" alt="About Art">
+          </div>
+          <div class="flip-back">
+            <div class="story-content">
+              <h3 class="story-title">ABOUT</h3>
+              <p>La Galerie des Archives est un espace vivant de mémoire...<br><br>
+              Un lieu où l'art rencontre les souvenirs...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
+  </main>
 
   <script src="scripts.js"></script>
-
 </body>
 </html>
