@@ -1,3 +1,4 @@
+/* Overall page styling */
 body {
   background: url(images/background1.jpg) center/cover no-repeat fixed;
   color: #1c1c1c;
@@ -6,36 +7,37 @@ body {
   padding: 0;
 }
 
+/* Overlay for background */
 .overlay {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.7);
   z-index: 0;
-  pointer-events: none;
+  pointer-events: none; /* Allows clicks to pass through */
 }
 
+/* Thinner top bar, black background */
 .topbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
-  z-index: 1000;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: #000; /* Black color */
+  z-index: 10;
+  padding: 0.5rem 2rem; /* Thinner bar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .navbar a {
-  font-family: 'Georgia', serif;
+  font-family: 'Brush Script MT', cursive;
   font-size: 1.2rem;
-  color: #2e1f14;
+  color: #fff; /* White text on black background */
   text-decoration: none;
   margin-right: 1rem;
 }
@@ -46,9 +48,11 @@ body {
   border: 1px solid #ccc;
 }
 
+/* Hero section styling */
 .hero {
+  background: url(images/background1.jpg) center/cover;
   text-align: center;
-  padding: 6rem 1rem 4rem;
+  padding: 4rem 1rem;
   color: #2e1f14;
 }
 
@@ -65,61 +69,38 @@ body {
   margin: auto;
 }
 
+/* Archive and mosaic grid styling for images */
 .archive {
   padding: 2rem;
   display: grid;
-  gap: 2rem;
-  max-width: 900px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 1.5rem;
+  max-width: 1000px;
   margin: auto;
-  position: relative;
-  z-index: 1;
 }
 
+/* Entry items */
 .entry {
   background: #fffef9;
   padding: 1.5rem;
   border: 1px solid #e1dcd2;
   border-radius: 12px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
 }
 
-.entry h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.entry audio, .entry img, .entry video {
-  width: 100%;
-  margin-top: 1rem;
-}
-
-.entry img, .entry video {
-  height: auto;
-  object-fit: cover;
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-  margin-bottom: 1rem;
-}
-
-.caption {
-  font-size: 0.9rem;
-  color: #555;
-  margin-top: 0.5rem;
-  font-style: italic;
-}
-
-/* FLIP CARD (ZINE STYLE) */
+/* Flip Card styling */
 .flip-card {
   perspective: 1000px;
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   margin: auto;
 }
 
 .flip-inner {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 400px; /* Adjusted height */
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
@@ -136,7 +117,7 @@ body {
   backface-visibility: hidden;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 .flip-front img {
@@ -155,7 +136,6 @@ body {
   justify-content: center;
   align-items: center;
   text-align: left;
-  overflow-y: auto;
 }
 
 .story-content {
@@ -174,15 +154,59 @@ body {
   color: #5c3c2e;
 }
 
-.about {
-  background: #fcf9f3;
+/* About Page Flip Card Styling */
+.about-page {
   padding: 2rem;
   max-width: 800px;
-  margin: 3rem auto;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  margin: auto;
+  display: flex;
+  justify-content: center;
 }
 
-.about.hidden {
-  display: none;
+.about-flip-card {
+  perspective: 1000px;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.about-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.about-flip-card:hover .about-flip-inner,
+.about-flip-card:focus-within .about-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.about-flip-front, .about-flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-flip-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-flip-back {
+  background-color: #fcf9f3;
+  color: #2e1f14;
+  transform: rotateY(180deg);
+  padding: 2rem;
+  font-family: 'Georgia', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
 }
