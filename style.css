@@ -2,19 +2,14 @@
 body {
   background: url(images/background1.jpg) center/cover no-repeat fixed;
   color: #1c1c1c;
-  font-family: 'Georgia', serif;
+  font-family: 'Georgia', serif; /* Minimalist, formal font */
   margin: 0;
   padding: 0;
 }
 
-/* Overlay for background */
+/* Remove the overlay that was causing issues */
 .overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(255, 255, 255, 0.7);
-  z-index: 0;
-  pointer-events: none; /* Allows clicks to pass through */
+  display: none; /* Removed the overlay */
 }
 
 /* Thinner top bar, black background */
@@ -35,7 +30,7 @@ body {
 }
 
 .navbar a {
-  font-family: 'Brush Script MT', cursive;
+  font-family: 'Georgia', serif; /* Formal, clean font */
   font-size: 1.2rem;
   color: #fff; /* White text on black background */
   text-decoration: none;
@@ -89,7 +84,15 @@ body {
   overflow: hidden;
 }
 
-/* Flip Card styling */
+/* Prevent image changes like cropping or rounded corners */
+.entry img {
+  width: 100%;
+  height: auto; /* Keep original aspect ratio */
+  object-fit: contain; /* Ensure the whole image is visible */
+  margin-bottom: 1rem;
+}
+
+/* Flip Card styling (Black background instead of beige) */
 .flip-card {
   perspective: 1000px;
   width: 100%;
@@ -127,11 +130,11 @@ body {
 }
 
 .flip-back {
-  background-color: #fcf9f3;
-  color: #2e1f14;
+  background-color: #000; /* Black color */
+  color: #fff; /* White text for readability */
   transform: rotateY(180deg);
   padding: 1rem;
-  font-family: 'Georgia', serif;
+  font-family: 'Georgia', serif; /* Formal, minimal font */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,24 +153,23 @@ body {
   margin-bottom: 1rem;
   font-size: 1.2rem;
   font-weight: bold;
-  font-family: 'Georgia', serif;
-  color: #5c3c2e;
+  color: #fff; /* White text */
 }
 
-/* About Page Flip Card Styling */
+/* About Page Flip Card Styling (Image centered on the page) */
 .about-page {
   padding: 2rem;
-  max-width: 800px;
-  margin: auto;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen */
+  background-color: #f9f9f9;
 }
 
 .about-flip-card {
   perspective: 1000px;
   width: 100%;
   max-width: 600px;
-  margin: auto;
 }
 
 .about-flip-inner {
@@ -200,8 +202,8 @@ body {
 }
 
 .about-flip-back {
-  background-color: #fcf9f3;
-  color: #2e1f14;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
   transform: rotateY(180deg);
   padding: 2rem;
   font-family: 'Georgia', serif;
