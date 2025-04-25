@@ -10,12 +10,11 @@
   <div class="overlay"></div>
 
   <header class="topbar">
-  <nav class="navbar">
-    <a href="#about">About Galerie des Archives</a>
-    <input type="text" id="searchBox" placeholder="Recherche...">
-  </nav>
-</header>
-
+    <nav class="navbar">
+      <a href="#about">About</a>
+      <input type="text" id="searchBox" placeholder="Recherche...">
+    </nav>
+  </header>
 
   <div class="hero">
     <h1>Voices</h1>
@@ -23,7 +22,6 @@
   </div>
 
   <div class="archive">
-    <!-- Audio Entry -->
     <div class="entry">
       <h2>“Étrangère.”</h2>
       <p>Une histoire en kosovar.</p>
@@ -33,41 +31,52 @@
       </audio>
     </div>
 
-    <!-- Flip Card Entry (Zine Style) -->
     <div class="entry flip-card">
-  <div class="flip-inner">
-    <div class="flip-front">
-      <img src="images/photo1.jpg" alt="Collage Art">
-    </div>
-    <div class="flip-back">
-      <div class="story-content">
-        <h3 class="story-title">Samedi, 31 décembre 2022</h3>
-        <p>
-    Ce soir, je suis seule. C’est Nouvel An, et ma mère est encore en cuisine, pas à la maison, mais dans un restaurant. Elle est cuisinière, et même ce soir, surtout ce soir, elle doit travailler. Pendant que d’autres trinquent, dansent, comptent les secondes avant minuit, elle est derrière les fourneaux, à préparer des plats qu’elle ne mangera pas.
-Dans notre pays, Nouvel An, c’est comme Noël ici. C’est le moment le plus important de l’année. On se retrouve tous en famille, on prépare des repas pendant deux jours, on met de la musique, on s’habille bien, et on commence l’année ensemble. C’est un moment de bonheur. Mais ici, c’est juste un autre jour où les immigrés doivent travailler pendant que les autres profitent.
-J’ai 17 ans, et ce soir, je me sens vide. Pas seulement parce que je suis seule, mais parce que j’ai cette boule dans la gorge, de tristesse, de culpabilité aussi. Je vois à quel point ma mère se sacrifie. Elle fait tout pour que j’aie une vie meilleure, mais à quel prix ? Elle ne vit pas. Elle travaille. Tout le temps.
-Être immigré, c’est un enfer silencieux. T’as pas les mêmes droits, pas la même vie. Et pourtant, on attend de toi que tu fasses semblant. Que tu dises merci, que tu sois reconnaissante, même quand t’as rien. Moi, je veux juste une vie normale. Mais je suis née dans une société qui avait déjà écrit mon histoire avant même que je comprenne comment marcher. Et ce soir, plus que jamais, j’en ressens le poids.
- <br><br>— Dh. R.
-        </p>
+      <div class="flip-inner">
+        <div class="flip-front">
+          <img src="images/photo1.jpg" alt="Collage Art">
+        </div>
+        <div class="flip-back">
+          <div class="story-content">
+            <h3 class="story-title">Samedi, 31 décembre 2022</h3>
+            <p>
+              Ce soir, je suis seule... (text snipped for brevity)
+              <br><br>— Dh. R.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-    <!-- Image Entry -->
+    <div class="entry flip-card">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <img src="images/photo2.jpg" alt="Collage Art">
+        </div>
+        <div class="flip-back">
+          <div class="story-content">
+            <h3 class="story-title">Dimanche, 5 février 2023</h3>
+            <p>Elle a raconté son histoire avec des silences...</p>
+            <audio controls>
+              <source src="audio/audio2.mp3" type="audio/mp3">
+              Votre navigateur ne supporte pas cet élément.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="entry">
       <img src="images/photo4.jpg" alt="Collage Art" />
       <p class="caption">"Soft Rage", collage by anonymous contributor</p>
     </div>
   </div>
 
-  <script src="scripts.js"></script>
-
   <section id="about" class="about hidden">
-  <h2>Sur la Galerie des Archives</h2>
-  <p>La Galerie des Archives est un espace vivant de mémoire, d'art et de résistance. C'est un espace dédié à la mémoire des voix silencées et à la réinvention de nos histoires communes..</p>
-</section>
+    <h2>Sur la Galerie des Archives</h2>
+    <p>La Galerie des Archives est un espace vivant de mémoire, d'art et de résistance...</p>
+  </section>
 
-
+  <script src="scripts.js"></script>
 </body>
 </html>
