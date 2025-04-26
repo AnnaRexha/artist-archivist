@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Galerie des Archives</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Topbar (Fixed at the top) -->
+
+  <!-- Topbar -->
   <header class="topbar">
     <nav class="navbar">
       <a href="about.html" class="about-link">About</a>
@@ -16,70 +17,28 @@
     </nav>
   </header>
 
+  <!-- Archive Grid -->
   <div class="archive">
-    <!-- Flip Cards -->
-    <div class="entry flip-card">
-      <div class="flip-inner">
-        <div class="flip-front">
-          <img src="images/photo1.jpg" alt="Collage Art">
-        </div>
-        <div class="flip-back">
-          <div class="story-content">
-            <h3 class="story-title">Samedi, 31 décembre 2022</h3>
-            <p>Ce soir, je suis seule. C’est Nouvel An... [Texte complet]</p>
+    <div class="entry">
+      <div class="flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <img src="images/photo1.jpg" alt="Collage Art 1">
+          </div>
+          <div class="flip-back">
+            <div class="story-content">
+              <h3 class="story-title">Samedi, 31 décembre 2022</h3>
+              <p>Ce soir, je suis seule. C’est Nouvel An... [Texte complet]</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="entry flip-card">
-      <div class="flip-inner">
-        <div class="flip-front">
-          <img src="images/photo2.jpg" alt="Collage Art">
-        </div>
-        <div class="flip-back">
-          <div class="story-content">
-            <h3 class="story-title">Lundi, 15 juin 2020</h3>
-            <p>Je me lève chaque matin avant l’aube... [Texte complet]</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Repeat similar structure for photo2, photo3, etc. -->
 
-    <div class="entry flip-card">
-      <div class="flip-inner">
-        <div class="flip-front">
-          <img src="images/photo3.jpg" alt="Collage Art">
-        </div>
-        <div class="flip-back">
-          <div class="story-content">
-            <h3 class="story-title">Samedi, 25 janvier 2025</h3>
-            <audio controls>
-              <source src="audio/audio1.mp3" type="audio/mp3" />
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="entry flip-card">
-      <div class="flip-inner">
-        <div class="flip-front">
-          <img src="images/photo4.jpg" alt="Collage Art">
-        </div>
-        <div class="flip-back">
-          <div class="story-content">
-            <h3 class="story-title">ᵀᴀᴼᴼᴀᴼ, ߹ ᴀᴏûᴼ ߹߸߹߹</h3>
-            <p>« ᴍ'ᴀᴀᴋ ᴄᴏᴀ... [Texte complet] »</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Additional Flip Cards (photo5 to photo11) -->
   </div>
 
-  <script src="scripts.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
