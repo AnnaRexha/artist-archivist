@@ -116,7 +116,7 @@ body {
 
 /* Back */
 .flip-back {
-  background: rgba(0, 0, 0, 0.7); /* Transparent black */
+  background: rgba(0, 0, 0, 0.4); /* Transparent black */
   color: white;
   transform: rotateY(180deg);
   display: flex;
