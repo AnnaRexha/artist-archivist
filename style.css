@@ -58,30 +58,6 @@ body {
   text-transform: uppercase; /* All caps */
 }
 
-.overlay {
-  display: none; /* hide the overlay */
-}
-
-/* Back Button Styling */
-.back-button {
-  background-color: #000;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-size: 1rem;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 20px;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 10;
-}
-
-.back-button:hover {
-  background-color: #333;
-}
-
 /* Flip Card Styles */
 .flip-card {
   perspective: 1000px;
@@ -104,16 +80,11 @@ body {
 }
 
 .flip-front img {
-  width: 100%;
-  height: auto; /* let height adjust naturally */
-  object-fit: contain; /* do not crop the image */
-}
-
-
-.flip-front img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* instead of cover */
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* ensure images are not cropped */
   padding: 10px; /* optional, gives a little breathing space */
 }
 
@@ -149,18 +120,9 @@ body {
   height: auto; /* let entries have natural height depending on their images */
 }
 
-
 /* Fix for topbar overlapping content */
 body {
   padding-top: 80px; /* Push the content down so it's not hidden under the topbar */
-}
-
-/* Make images keep their original size */
-.flip-front img {
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain; /* So image fits nicely without cropping */
 }
 
 /* Make flip-back text scrollable if it's too long */
