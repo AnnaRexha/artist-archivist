@@ -1,127 +1,125 @@
-/* Reset and base styles */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body */
 body {
   background: url('images/background1.jpg') center/cover no-repeat fixed;
   font-family: 'Georgia', serif;
-  color: #1c1c1c;
-  line-height: 1.6;
+  padding-top: 80px;
 }
 
-/* Topbar Styles */
+/* Topbar */
 .topbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #000;
+  background: black;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   z-index: 100;
-  padding: 0.8rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between;
 }
 
 .navbar a {
-  color: #fff;
+  color: white;
   text-decoration: none;
-  font-size: 1rem;
   margin-right: 1rem;
 }
 
-#searchBox {
-  padding: 0.4rem 0.8rem;
-  border: 1px solid #ccc;
-  background: rgba(255, 255, 255, 0.3);
-  color: #000;
-  border-radius: 4px;
-  width: 160px;
-}
-
-/* Ensure Title is in All Caps */
-.navbar .title {
-  text-align: center;
+.title {
+  text-transform: uppercase;
   font-weight: bold;
   font-size: 1.2rem;
-  color: #fff;
   letter-spacing: 1px;
-  text-transform: uppercase; /* All caps */
 }
 
-/* Flip Card Styles */
-.flip-card {
+#searchBox {
+  background: rgba(255,255,255,0.3);
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  border-radius: 4px;
+  color: black;
+}
+
+/* Archive Grid */
+.archive {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.1rem; /* very small gap */
+  padding: 1rem;
+}
+
+/* Entry */
+.entry {
   perspective: 1000px;
 }
 
-.flip-inner {
+/* Flip Card */
+.flip-card {
+  width: 100%;
+  aspect-ratio: 3 / 4; /* Portrait format */
   position: relative;
+}
+
+.flip-inner {
   width: 100%;
   height: 100%;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  position: relative;
 }
 
 .flip-card:hover .flip-inner {
   transform: rotateY(180deg);
 }
 
+/* Front */
 .flip-front, .flip-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden; /* KEY POINT */
-  top: 0;
-  left: 0;
+  backface-visibility: hidden;
+  border: 1px solid transparent;
 }
 
-.flip-front {
-  z-index: 2;
+.flip-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 
+/* Hover zoom effect */
+.flip-front img:hover {
+  transform: scale(1.05);
+}
+
+/* Back */
 .flip-back {
-  background-color: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.7); /* Transparent black */
   color: white;
   transform: rotateY(180deg);
-}
-
-.story-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
+  text-align: left;
+  border-radius: 8px;
 }
 
 .story-title {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
-.archive {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 0.2rem; /* smaller gap */
-}
-
-.entry {
-  height: auto; /* let entries have natural height depending on their images */
-}
-
-/* Fix for topbar overlapping content */
-body {
-  padding-top: 80px; /* Push the content down so it's not hidden under the topbar */
-}
-
-/* Make flip-back text scrollable if it's too long */
 .story-content {
-  max-height: 300px; /* Limit the height of text area */
-  overflow-y: auto; /* Scroll if the text overflows */
+  overflow-y: auto;
+  max-height: 90%;
 }
