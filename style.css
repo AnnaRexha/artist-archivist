@@ -148,3 +148,21 @@ body {
   gap: 1rem;
 }
 
+/* Fix for topbar overlapping content */
+body {
+  padding-top: 80px; /* Push the content down so it's not hidden under the topbar */
+}
+
+/* Make images keep their original size */
+.flip-front img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain; /* So image fits nicely without cropping */
+}
+
+/* Make flip-back text scrollable if it's too long */
+.story-content {
+  max-height: 300px; /* Limit the height of text area */
+  overflow-y: auto; /* Scroll if the text overflows */
+}
