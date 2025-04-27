@@ -104,10 +104,8 @@ body {
 
 .flip-front img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
+  height: auto;
+  object-fit: contain; /* VERY GOOD */
 }
 
 /* Hover zoom effect */
