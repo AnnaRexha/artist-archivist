@@ -74,17 +74,19 @@ body {
 }
 
 /* Flip Card */
+
 .flip-card {
-  width: 100%;
-  aspect-ratio: 3 / 4; /* Portrait format */
-  position: relative;
+  perspective: 1000px;
+  width: 95%; /* Was 90%, can be a bit wider */
+  max-width: 700px; /* Instead of 600px, bigger! */
+  margin: 1rem auto; /* Margin around */
 }
 
 .flip-inner {
   position: relative;
   width: 100%;
-  height: auto; /* Allow natural height */
-  aspect-ratio: 3 / 4; /* Optional: keep a shape, like portrait */
+  height: auto;
+  aspect-ratio: 3 / 4; /* Or even 2/3 if you want taller */
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
@@ -132,6 +134,8 @@ body {
 }
 
 .story-content {
+  padding: 2rem;
+  max-height: 80%;
   overflow-y: auto;
-  max-height: 90%;
 }
+
