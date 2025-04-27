@@ -63,10 +63,10 @@ body {
 /* Archive Grid */
 .archive {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 0.05rem; /* almost NO gap between images */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* bigger images */
+  gap: 0.2rem; /* small gap */
+  padding: 1rem;
 }
-
 
 /* Entry */
 .entry {
@@ -75,11 +75,11 @@ body {
 
 /* Flip Card */
 .flip-card {
-  perspective: 1000px;
+  background-color: transparent;
   width: 100%;
-  max-width: 100%; /* take full space */
+  height: 400px; /* consistent height */
+  perspective: 1000px;
   position: relative;
-  overflow: visible; /* allow flipped content to go over */
 }
 
 .flip-inner {
