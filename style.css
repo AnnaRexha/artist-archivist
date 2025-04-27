@@ -74,19 +74,17 @@ body {
 }
 
 /* Flip Card */
-
 .flip-card {
   perspective: 1000px;
-  width: 95%; /* Was 90%, can be a bit wider */
-  max-width: 700px; /* Instead of 600px, bigger! */
-  margin: 1rem auto; /* Margin around */
+  width: 95%; /* take more space */
+  max-width: 750px; /* a bit wider */
+  margin: 1rem auto; /* small margin around */
 }
 
 .flip-inner {
   position: relative;
   width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 4; /* Or even 2/3 if you want taller */
+  height: 500px; /* Increase height to fit more text */
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
@@ -117,15 +115,14 @@ body {
 
 /* Back */
 .flip-back {
-  background: rgba(0, 0, 0, 0.4); /* Transparent black */
-  color: white;
+  background-color: rgba(0, 0, 0, 0.6); /* Even more transparent */
+  color: #fff;
   transform: rotateY(180deg);
+  padding: 1.5rem; /* smaller padding */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
   text-align: left;
-  border-radius: 8px;
 }
 
 .story-title {
@@ -134,8 +131,8 @@ body {
 }
 
 .story-content {
-  padding: 2rem;
-  max-height: 80%;
+  padding: 1rem;
+  max-height: 450px; /* match larger flip card */
   overflow-y: auto;
 }
 
