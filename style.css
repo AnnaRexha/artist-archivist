@@ -221,3 +221,22 @@ scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
   height: 100%;
   z-index: -1; /* This ensures the particles stay behind your content */
 }
+
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+  /* Smaller font sizes for navbar links */
+  .navbar a {
+    font-size: 0.9rem; /* Smaller text for better mobile readability */
+  }
+
+  /* Adjust archive grid layout for smaller screens */
+  .archive {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Reduce grid column width */
+  }
+
+  /* Make the flip-card height smaller on mobile */
+  .flip-card {
+    height: 300px; /* Adjust height for mobile */
+  }
+}
