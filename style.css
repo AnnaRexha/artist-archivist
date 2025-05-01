@@ -7,8 +7,12 @@
 
 /* Body */
 body {
-  background: url('images/background1.jpg') center/cover no-repeat fixed;
-  padding-top: 80px;
+  body {
+  background-image: url('background2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 }
 body {
   font-family: 'Open Sans', sans-serif;
