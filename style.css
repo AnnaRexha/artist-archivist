@@ -8,9 +8,23 @@
 /* Body */
 body {
   background: url('images/background1.jpg') center/cover no-repeat fixed;
-  font-family: 'Georgia', serif;
   padding-top: 80px;
 }
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333; /* Dark gray text for readability */
+}
+
+h1, h2, h3 {
+  font-family: 'Georgia', serif;
+  font-size: 2em; /* Adjust size of headings */
+}
+
+p {
+  font-size: 1.1em; /* Slightly larger text for body */
+}
+
+
 
 /* Topbar */
 .topbar {
@@ -170,3 +184,4 @@ body {
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
+
