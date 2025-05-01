@@ -163,6 +163,21 @@ p {
   font-size: 1rem;
 }
 
+/* Highlighting effect for active entries */
+.entry.active {
+  border: 3px solid #FF6347; /* Highlight border color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow effect */
+  transform: scale(1.05); /* Slightly scale the card when active */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition effect */
+}
+
+/* Optional: Highlighting on hover too (if needed) */
+.entry:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+
 /* Elegant transparent scrollbars for everything */
 ::-webkit-scrollbar {
   width: 8px;
