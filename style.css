@@ -124,19 +124,12 @@ p {
 }
 
 /* Active state for entries */
-/* Active entry with background color */
 .entry.active {
   border: 3px solid #FF6347;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: scale(1.05);
   transition: transform 0.3s, box-shadow 0.3s;
   background-color: rgba(255, 99, 71, 0.1); /* Highlight with a soft background */
-}
-
-
-/* Hover zoom effect */
-.flip-front img:hover {
-  transform: scale(1.05);
 }
 
 /* Back */
@@ -166,21 +159,6 @@ p {
   font-size: 1rem;
 }
 
-/* Highlighting effect for active entries */
-.entry.active {
-  border: 3px solid #FF6347; /* Highlight border color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow effect */
-  transform: scale(1.05); /* Slightly scale the card when active */
-  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition effect */
-}
-
-/* Optional: Highlighting on hover too (if needed) */
-.entry:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-
 /* Elegant transparent scrollbars for everything */
 ::-webkit-scrollbar {
   width: 8px;
@@ -198,30 +176,6 @@ p {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.5);
 }
-
-/* Firefox */
-scrollbar-width: thin;
-scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
-
-/* Gallery Hover Effects */
-.entry:hover {
-  transform: scale(1.05); /* Slight zoom effect */
-}
-
-.entry:active {
-  transform: scale(0.98); /* Slight shrink effect when clicked */
-}
-
-
-#particles-js {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* This ensures the particles stay behind your content */
-}
-
 
 /* Responsive adjustments for mobile screens */
 @media (max-width: 768px) {
