@@ -61,7 +61,6 @@ document.querySelectorAll(".flip-back").forEach(back => {
   });
 });
 
-
 particlesJS('particles-js', {
   particles: {
     number: {
