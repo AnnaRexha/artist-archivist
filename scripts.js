@@ -30,6 +30,13 @@ document.querySelectorAll(".entry").forEach(entry => {
   entry.addEventListener("click", function () {
     // Toggle a class for active or focused card (could be styled differently in CSS)
     entry.classList.toggle("active");
+
+    // Optionally, deactivate other entries when one is activated
+    document.querySelectorAll(".entry").forEach(otherEntry => {
+      if (otherEntry !== entry) {
+        otherEntry.classList.remove("active");
+      }
+    });
   });
 });
 
