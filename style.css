@@ -7,18 +7,14 @@
 
 /* Body */
 body {
-  body {
   background-image: url('images/background2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-}
-body {
   font-family: 'Open Sans', sans-serif;
   color: #333; /* Dark gray text for readability */
 }
 
+/* Heading */
 h1, h2, h3 {
   font-family: 'Georgia', serif;
   font-size: 2em; /* Adjust size of headings */
@@ -27,8 +23,6 @@ h1, h2, h3 {
 p {
   font-size: 1.1em; /* Slightly larger text for body */
 }
-
-
 
 /* Topbar */
 .topbar {
@@ -75,20 +69,26 @@ p {
   border-radius: 4px;
   color: black;
   width: 160px;
+  transition: background 0.3s ease;
 }
 
+#searchBox:focus {
+  background: rgba(255,255,255,0.6);
+}
 
 /* Archive Grid */
 .archive {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* bigger images */
-  gap: 0.2rem; /* small gap */
+  gap: 1rem; /* small gap */
   padding: 1rem;
+  margin-top: 80px; /* so the content doesn't go under the navbar */
 }
 
 /* Entry */
 .entry {
   perspective: 1000px;
+  transition: transform 0.3s ease;
 }
 
 /* Flip Card */
@@ -98,6 +98,7 @@ p {
   height: 400px; /* consistent height */
   perspective: 1000px;
   position: relative;
+  cursor: pointer; /* Show a pointer to indicate that it's clickable */
 }
 
 .flip-inner {
@@ -107,7 +108,6 @@ p {
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
-
 
 .flip-card:hover .flip-inner {
   transform: rotateY(180deg);
@@ -127,8 +127,9 @@ p {
   height: 100%;
   object-fit: contain; /* no cropping */
   padding: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
-
 
 /* Hover zoom effect */
 .flip-front img:hover {
@@ -147,8 +148,8 @@ p {
   padding: 1rem;
   overflow-y: auto;
   text-align: center;
+  border-radius: 8px;
 }
-
 
 .story-title {
   font-size: 1.2rem;
@@ -159,6 +160,7 @@ p {
   padding: 1rem;
   max-height: 380px; /* a little bit smaller than flip-inner height */
   overflow-y: auto;
+  font-size: 1rem;
 }
 
 /* Elegant transparent scrollbars for everything */
@@ -179,26 +181,11 @@ p {
   background: rgba(255, 255, 255, 0.5);
 }
 
-
-.gallery-item img {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Gallery Hover Effects */
+.entry:hover {
+  transform: scale(1.05); /* Slight zoom effect */
 }
 
-.gallery-item:hover img {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-.gallery-item {
-  margin: 20px;
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.gallery-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
+.entry:active {
+  transform: scale(0.98); /* Slight shrink effect when clicked */
 }
