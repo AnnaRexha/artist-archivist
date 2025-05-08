@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galerie des Archives</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <!-- Include Topbar from about.html -->
+  <div id="topbar-container"></div>
+
+  <!-- Archive Grid -->
+  <div class="archive-grid">
+    <!-- Example of a single photo -->
+    <div class="archive-item">
+      <a href="story1.html">
+        <img src="images/photo1.jpg" alt="Collage Art 1">
+      </a>
+    </div>
+    <!-- Add more images here -->
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Include the topbar from the external about.html file
+    fetch("about.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("topbar-container").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
