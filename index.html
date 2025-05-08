@@ -8,28 +8,44 @@
 </head>
 <body>
 
-  <!-- Include Topbar from about.html -->
-  <div id="topbar-container"></div>
+  <!-- Topbar -->
+  <header class="topbar">
+    <nav class="navbar">
+      <a href="about.html" class="about-link">About</a>
+      <div class="title">Galerie des Archives</div>
+      <input type="text" id="searchBox" placeholder="Recherche...">
+    </nav>
+  </header>
 
-  <!-- Archive Grid -->
-  <div class="archive-grid">
-    <!-- Example of a single photo -->
-    <div class="archive-item">
+  <!-- Archive Grid (Image section) -->
+  <div class="archive">
+    <div class="entry">
       <a href="story1.html">
-        <img src="images/photo1.jpg" alt="Collage Art 1">
+        <img src="images/photo1.jpg" alt="Story 1">
       </a>
     </div>
-    <!-- Add more images here -->
+    <div class="entry">
+      <a href="story2.html">
+        <img src="images/photo2.jpg" alt="Story 2">
+      </a>
+    </div>
+    <div class="entry">
+      <a href="story3.html">
+        <img src="images/photo3.jpg" alt="Story 3">
+      </a>
+    </div>
+    <div class="entry">
+      <a href="story4.html">
+        <img src="images/photo4.jpg" alt="Story 4">
+      </a>
+    </div>
+    <div class="entry">
+      <a href="story5.html">
+        <img src="images/photo5.jpg" alt="Story 5">
+      </a>
+    </div>
   </div>
 
   <script src="script.js"></script>
-  <script>
-    // Include the topbar from the external about.html file
-    fetch("about.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("topbar-container").innerHTML = data;
-      });
-  </script>
 </body>
 </html>
