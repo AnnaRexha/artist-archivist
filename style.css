@@ -46,6 +46,16 @@ body {
   border-radius: 5px;
   border: 1px solid #ccc;
 }
+.quote-banner {
+  text-align: center;
+  font-size: 2rem;
+  font-style: italic;
+  margin: 4rem 0;
+  color: #444;
+  background: #f7f7f7;
+  padding: 2rem;
+  border-left: 4px solid #aaa;
+}
 
 /* Archive Grid for images */
 .archive {
