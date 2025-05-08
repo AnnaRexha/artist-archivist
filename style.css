@@ -76,23 +76,8 @@ body {
   transform: scale(1.05);
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .topbar .navbar {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #searchBox {
-    margin-top: 10px;
-    width: 100%;
-  }
-
-  .archive {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
-  
-  .quote-banner {
+/* Quote Banner */
+.quote-banner {
   text-align: center;
   font-size: 2rem;
   font-style: italic;
@@ -108,4 +93,24 @@ body {
   border-radius: 8px;
 }
 
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .topbar .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #searchBox {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .archive {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .quote-banner {
+    font-size: 1.5rem; /* Slightly smaller font for mobile */
+    padding: 1.5rem 1rem; /* Less padding on mobile */
+  }
 }
