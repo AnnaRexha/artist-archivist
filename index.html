@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Galerie des Archives</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -13,84 +13,67 @@
     <nav class="navbar">
       <a href="about.html" class="about-link">About</a>
       <div class="title">Galerie des Archives</div>
-      <input type="text" id="searchBox" placeholder="Recherche...">
+      <input type="text" id="searchBox" placeholder="Recherche..." />
     </nav>
   </header>
 
-  <!-- Archive Grid (Image section) -->
-  <div class="archive">
-    <div class="entry">
+  <!-- Quote block -->
+  <div class="quote-banner">
+    <p>
+      Lorsqu'on lui a demandé ce qu'elle considérait comme le premier signe de la civilisation humaine, l'anthropologue Margaret Mead n'a pas mentionné d'outils ou de technologie. Elle a plutôt évoqué quelque chose de beaucoup plus simple : un os du fémur guéri...
+    </p>
+  </div>
+
+  <!-- Masonry Grid Gallery -->
+  <div class="grid">
+    <div class="grid-sizer"></div>
+
+    <div class="grid-item">
       <a href="stories/story1.html">
-        <img src="images/photo1.jpg" alt="Story 1">
+        <img src="images/photo1.jpg" alt="Story 1" />
       </a>
     </div>
-    <div class="entry">
+
+    <div class="grid-item">
       <a href="stories/story2.html">
-        <img src="images/photo2.jpg" alt="Story 2">
+        <img src="images/photo2.jpg" alt="Story 2" />
       </a>
     </div>
-    <div class="entry">
+
+    <div class="grid-item">
       <a href="stories/story3.html">
-        <img src="images/photo3.jpg" alt="Story 3">
+        <img src="images/photo3.jpg" alt="Story 3" />
       </a>
     </div>
-    <div class="entry">
-      <a href="story4.html">
-        <img src="images/photo4.jpg" alt="Story 4">
+
+    <!-- Add more grid items like this -->
+    <!-- Example:
+    <div class="grid-item">
+      <a href="stories/story4.html">
+        <img src="images/photo4.jpg" alt="Story 4" />
       </a>
-      
-      <div class="quote-banner">
-  <p>Je veux juste une vie normale.</p>        
     </div>
-      
-    <div class="entry">
+    -->
+    <div class="grid-item">
       <a href="stories/story5.html">
-        <img src="images/photo5.jpg" alt="Story 5">
+        <img src="images/photo5.jpg" alt="Story 5" />
       </a>
     </div>
-    <div class="entry">
+    <div class="grid-item">
       <a href="stories/story6.html">
-        <img src="images/photo6.jpg" alt="Story 6">
-     </a>
+        <img src="images/photo6.jpg" alt="Story 6" />
+      </a>
     </div>
-    <div class="entry">
+    <div class="grid-item">
       <a href="stories/story7.html">
-        <img src="images/photo7.jpg" alt="Story 7">
-     </a>
-    </div>
-    <div class="entry">
-      <a href="stories/story8.html">
-        <img src="images/photo8.jpg" alt="Story 8">
-     </a>
-       
-      <div class="quote-banner">
-  <p>Lorsqu'on lui a demandé ce qu'elle considérait comme le premier signe de la civilisation humaine, l'anthropologue Margaret Mead n'a pas mentionné d'outils ou de technologie. Elle a plutôt évoqué quelque chose de beaucoup plus simple : un os du fémur guéri. Dans la nature, une jambe cassée est souvent synonyme de mort. Un animal blessé ne peut pas échapper aux prédateurs ou trouver de la nourriture ou de l'eau. Mais un os cicatrisé suggère que quelqu'un a pris le temps de s'occuper du blessé, de le protéger et de le nourrir jusqu'à ce qu'il se rétablisse.</p>
-    </div>
-      
-    <div class="entry">
-      <a href="stories/story9.html">
-        <img src="images/photo9.jpg" alt="Story 9">
-     </a>
-    </div>
-    <div class="entry">
-      <a href="stories/story10.html">
-        <img src="images/photo10.jpeg" alt="Story 10">
-     </a>
-    </div>
-    <div class="entry">
-      <a href="stories/story11.html">
-        <img src="images/photo11.jpg" alt="Story 11">
-     </a>
-    </div>
-    <div class="entry">
-      <a href="stories/story12.html">
-        <img src="images/photo12.jpg" alt="Story 12">
+        <img src="images/photo7.jpg" alt="Story 7" />
       </a>
     </div>
   </div>
-  
+
+  <!-- Scripts -->
   <script src="script.js"></script>
-      <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
 </body>
 </html>
