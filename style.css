@@ -1,62 +1,93 @@
-/* Global Styles */
-body {
-  font-family: 'Arial', sans-serif;
+/* Reset styles for everything */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1.6;
+  box-sizing: border-box;
 }
 
-/* Topbar Styling (optional, depending on your current about.html) */
-#topbar-container {
+/* Body styles */
+body {
+  background-color: #f7f7f7;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  padding-top: 60px; /* Make room for the topbar */
+}
+
+/* Topbar styles */
+.topbar {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  z-index: 10;
+  background-color: #333;
+  color: white;
+  padding: 20px 10px;
+  z-index: 1000;
 }
 
-/* Archive Grid Layout */
-.archive-grid {
+.topbar .navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar .title {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#searchBox {
+  padding: 5px 10px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Archive Grid for images */
+.archive {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-  margin-top: 80px; /* adjust for fixed topbar */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
 }
 
-.archive-item {
-  background-color: white;
-  border-radius: 8px;
+.entry {
+  position: relative;
   overflow: hidden;
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
   transition: transform 0.3s ease;
 }
 
-.archive-item img {
+.entry img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.archive-item:hover {
+.entry:hover {
   transform: scale(1.05);
 }
 
-.archive-item a {
-  display: block;
-}
-
-/* Story Page Link Styling */
-.archive-item a:hover img {
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-/* Simple Media Query for Responsive Design */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-  .archive-grid {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  .topbar .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #searchBox {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .archive {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }
