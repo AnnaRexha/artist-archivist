@@ -46,16 +46,6 @@ body {
   border-radius: 5px;
   border: 1px solid #ccc;
 }
-.quote-banner {
-  text-align: center;
-  font-size: 2rem;
-  font-style: italic;
-  margin: 4rem 0;
-  color: #444;
-  background: #f7f7f7;
-  padding: 2rem;
-  border-left: 4px solid #aaa;
-}
 
 /* Archive Grid for images */
 .archive {
@@ -101,4 +91,21 @@ body {
   .archive {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
+  
+  .quote-banner {
+  text-align: center;
+  font-size: 2rem;
+  font-style: italic;
+  margin: 4rem 0;
+  color: #333;
+  background: #f2f2f2;
+  padding: 2rem 1rem;
+  border-left: 5px solid #aaa;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  border-radius: 8px;
+}
+
 }
