@@ -6,25 +6,6 @@ document.getElementById("searchBox").addEventListener("input", function (e) {
   });
 });
 
-// Flip card interaction (optional for improving UX with mouse hover)
-document.querySelectorAll(".flip-card").forEach(card => {
-  card.addEventListener("mouseover", function () {
-    const flipInner = card.querySelector(".flip-inner");
-    if (flipInner) {
-      flipInner.style.transition = "transform 0.8s";
-      flipInner.style.transform = "rotateY(180deg)";
-    }
-  });
-
-  card.addEventListener("mouseout", function () {
-    const flipInner = card.querySelector(".flip-inner");
-    if (flipInner) {
-      flipInner.style.transition = "transform 0.8s";
-      flipInner.style.transform = "rotateY(0deg)";
-    }
-  });
-});
-
 // Adding active state for entries
 document.querySelectorAll(".entry").forEach(entry => {
   entry.addEventListener("click", function () {
