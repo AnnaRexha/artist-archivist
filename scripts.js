@@ -1,7 +1,7 @@
 // Search functionality
 document.getElementById("searchBox").addEventListener("input", function (e) {
   const term = e.target.value.toLowerCase();
-  document.querySelectorAll(".entry").forEach(entry => {
+  document.querySelectorAll(".grid-item").forEach(entry => {
     entry.style.display = entry.innerText.toLowerCase().includes(term) ? "block" : "none";
   });
 });
@@ -18,7 +18,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Image hover effect (optional: Add a subtle hover effect)
-document.querySelectorAll('.entry').forEach(entry => {
+document.querySelectorAll('.grid-item').forEach(entry => {
   entry.addEventListener('mouseover', function () {
     this.style.transform = "scale(1.05)";
     this.style.transition = "transform 0.3s ease";
