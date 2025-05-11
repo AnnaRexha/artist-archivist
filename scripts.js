@@ -15,3 +15,20 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.entry img').forEach(img => {
   observer.observe(img);
 });
+
+// Scroll-triggered fade-in for quotes
+const quoteElements = document.querySelectorAll('.quote-snippet');
+
+const quoteObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      quoteObserver.unobserve(entry.target); // Animate only once
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+quoteElements.forEach(quote => quoteObserver.observe(quote));
+
