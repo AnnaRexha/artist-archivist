@@ -1,12 +1,17 @@
-// Scroll-based grayscale to color transition
-window.addEventListener('scroll', function () {
-  const images = document.querySelectorAll('.entry img');
-  images.forEach(image => {
-    const rect = image.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom >= 0) {
-      image.style.filter = 'grayscale(0%)';  // Turn image into color when visible
+// Reveal image in color when it's visible in the viewport
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.filter = 'grayscale(0%)';
     } else {
-      image.style.filter = 'grayscale(100%)';  // Keep image grayscale when not visible
+      entry.target.style.filter = 'grayscale(100%)';
     }
   });
+}, {
+  threshold: 0.3 // triggers when 30% of the image is visible
+});
+
+// Observe all images inside .entry
+document.querySelectorAll('.entry img').forEach(img => {
+  observer.observe(img);
 });
