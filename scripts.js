@@ -16,19 +16,24 @@ document.querySelectorAll('.entry img').forEach(img => {
   observer.observe(img);
 });
 
-// Randomly place the floating quotes on load
+// Randomly place the floating quotes like constellations
 document.querySelectorAll('.floating-quote').forEach((quote) => {
-  const top = Math.floor(Math.random() * 2500) + 100; // Random top position
-  const left = Math.floor(Math.random() * 80) + 5;  // Random left position
-  quote.style.top = `${top}px`;
+  // Randomly assign position for quotes (within specific bounds)
+  const top = Math.floor(Math.random() * 80) + 10; // 10% to 90% of the viewport height
+  const left = Math.floor(Math.random() * 80) + 10; // 10% to 90% of the viewport width
+  quote.style.top = `${top}%`;
   quote.style.left = `${left}%`;
+
+  // Randomly rotate quotes slightly for a more organic look
+  const rotation = Math.floor(Math.random() * 30) - 15; // Random rotation between -15 and 15 degrees
+  quote.style.transform = `rotate(${rotation}deg)`;
 });
 
-// Fade in when scrolled into view
+// Fade in quotes when they are scrolled into view
 const quoteObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('visible'); // Add visible class when scrolled into view
+      entry.target.classList.add('visible'); // Add 'visible' class when scrolled into view
     }
   });
 }, {
