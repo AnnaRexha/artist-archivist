@@ -66,16 +66,20 @@ body {
   transition: transform 0.3s ease;
 }
 
+/* Grayscale images by default */
 .grid-item img {
   width: 100%;
   height: auto;
   object-fit: cover;
   max-height: 400px;
   display: block;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease; /* Smooth transition for color change */
 }
 
-.grid-item:hover {
-  transform: scale(1.05);
+/* When hovered or scrolled, color the images */
+.grid-item:hover img {
+  filter: grayscale(0%); /* Full color on hover */
 }
 
 /* Floating Quotes */
