@@ -134,4 +134,26 @@ body {
     font-size: 1.5rem; /* Slightly smaller font for mobile */
     padding: 1.5rem 1rem; /* Less padding on mobile */
   }
+
+  
+.quote-snippet {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #ccc;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 0 10px;
+  text-align: center;
+  font-family: 'Georgia', serif;
+  pointer-events: none; /* Keeps interaction focused on images */
+}
+
+.quote-snippet.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 }
