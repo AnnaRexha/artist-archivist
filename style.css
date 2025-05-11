@@ -48,53 +48,75 @@ body {
 }
 
 /* Archive Grid for images */
-.archive {
+.grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr); /* 12 columns for flexibility */
-  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust the size of each grid item */
+  gap: 20px;
   max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
 }
 
-.entry {
+.grid-item {
   position: relative;
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.3s ease;
-  filter: grayscale(100%);
 }
 
-.entry img {
+.grid-item img {
   width: 100%;
   height: auto;
   object-fit: cover;
   max-height: 400px;
   display: block;
-  transition: filter 0.5s ease-in-out, transform 0.3s ease;
 }
 
-/* Irregular Mosaic Layout */
-.entry:nth-child(odd) {
-  grid-column: span 6; /* Make odd images larger */
+.grid-item:hover {
+  transform: scale(1.05);
 }
 
-.entry:nth-child(even) {
-  grid-column: span 5; /* Make even images slightly smaller */
+/* Floating Quotes */
+.floating-quotes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 3000px; /* Adjust this depending on page height */
+  z-index: 10;
 }
 
-.entry:nth-child(3n) {
-  grid-column: span 4; /* Make every third image a bit smaller */
+.floating-quote {
+  position: absolute;
+  max-width: 200px;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Georgia', serif;
+  opacity: 0;
+  transition: opacity 1.5s ease;
 }
 
-.entry:hover img {
-  filter: grayscale(0%); /* Turn images to color on hover */
+/* Fade in when visible */
+.floating-quote.visible {
+  opacity: 1;
 }
 
-.entry:hover {
-  transform: scale(1.05); /* Subtle zoom on hover */
-}
+@media (max-width: 768px) {
+  .topbar .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  #searchBox {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
 }
