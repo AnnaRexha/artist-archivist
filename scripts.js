@@ -2,9 +2,9 @@
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.style.filter = 'grayscale(0%)';
+      entry.target.style.filter = 'grayscale(0%)'; // Image becomes colorful
     } else {
-      entry.target.style.filter = 'grayscale(100%)';
+      entry.target.style.filter = 'grayscale(100%)'; // Image stays grayscale
     }
   });
 }, {
@@ -17,9 +17,9 @@ document.querySelectorAll('.entry img').forEach(img => {
 });
 
 // Randomly place the floating quotes on load
-document.querySelectorAll('.floating-quote').forEach((quote, i) => {
-  const top = Math.floor(Math.random() * 2500) + 100;
-  const left = Math.floor(Math.random() * 80) + 5;
+document.querySelectorAll('.floating-quote').forEach((quote) => {
+  const top = Math.floor(Math.random() * 2500) + 100; // Random top position
+  const left = Math.floor(Math.random() * 80) + 5;  // Random left position
   quote.style.top = `${top}px`;
   quote.style.left = `${left}%`;
 });
@@ -28,13 +28,12 @@ document.querySelectorAll('.floating-quote').forEach((quote, i) => {
 const quoteObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+      entry.target.classList.add('visible'); // Add visible class when scrolled into view
     }
   });
 }, {
-  threshold: 0.1
+  threshold: 0.1 // Fade in when 10% of the quote is visible
 });
 
+// Observe all quotes
 document.querySelectorAll('.floating-quote').forEach(q => quoteObserver.observe(q));
-
-
