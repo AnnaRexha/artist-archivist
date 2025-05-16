@@ -12,7 +12,7 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 // Observe all images inside .entry
-document.querySelectorAll('.entry img').forEach(img => {
+document.querySelectorAll('.grid-item img').forEach(img => {
   observer.observe(img);
 });
 
