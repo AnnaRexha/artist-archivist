@@ -11,7 +11,9 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  padding-top: 60px; /* Make room for the topbar */
+  padding-top: 60px;
+  font-family: 'Georgia', serif;
+  overflow-x: hidden;
 }
 
 /* Topbar styles */
@@ -31,6 +33,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .topbar .title {
@@ -45,77 +48,99 @@ body {
   width: 200px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  margin-top: 10px;
 }
 
-/* Archive Grid for images */
+/* Archive Grid */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust the size of each grid item */
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 20px;
   max-width: 1200px;
-  margin: 40px auto;
+  margin: 60px auto;
   padding: 20px;
 }
 
+/* Individual image item */
 .grid-item {
   position: relative;
   overflow: hidden;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
-/* Grayscale images by default */
 .grid-item img {
   width: 100%;
-  height: auto;
+  height: 220px;
   object-fit: cover;
-  max-height: 400px;
-  display: block;
   filter: grayscale(100%);
-  transition: filter 0.5s ease; /* Smooth transition for color change */
+  transition: filter 0.5s ease;
 }
 
-/* When hovered or scrolled, color the images */
+/* Color on hover */
 .grid-item:hover img {
-  filter: grayscale(0%); /* Full color on hover */
+  filter: grayscale(0%);
 }
 
-/* Base styling for floating quotes */
+/* Floating Quotes Container */
 .floating-quotes {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 10; /* Ensure quotes appear above other content */
+  z-index: 5;
+  pointer-events: none;
 }
 
+/* Individual quote */
 .floating-quote {
   position: absolute;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-style: italic;
-  color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
-  font-family: 'Georgia', serif;
-  opacity: 0; /* Start hidden */
-  transition: opacity 1.5s ease; /* Smooth fade-in */
-  pointer-events: none; /* Ensures quotes do not block user interactions */
-}
-
-/* Make quote visible once in view */
-.floating-quote.visible {
-  opacity: 1; /* Fade in */
+  color: rgba(255, 255, 255, 0.75);
+  opacity: 0;
   transition: opacity 1.5s ease;
+  animation: float 10s ease-in-out infinite alternate;
 }
 
-/* Example for image hover effect (grayscale to color) */
-.entry img {
-  transition: filter 0.3s ease-in-out; /* Smooth transition for grayscale */
-  filter: grayscale(100%); /* Images are grayscale by default */
+/* Fade in when visible */
+.floating-quote.visible {
+  opacity: 1;
 }
 
-/* Add a hover effect to change images to color when hovered */
-.entry img:hover {
-  filter: grayscale(0%); /* Images turn to color on hover */
+/* Soft floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .topbar .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #searchBox {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+
+  .grid-item img {
+    height: 180px;
+  }
+
+  .floating-quote {
+    font-size: 1rem;
+  }
 }
