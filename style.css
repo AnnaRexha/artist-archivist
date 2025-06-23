@@ -217,17 +217,42 @@ body {
   z-index: 9999;
 }
 
-/* Video styling similar to images */
-.intro-video video {
-  width: 100%;
-  border-radius: 10px;
-  filter: grayscale(100%);
-  transition: filter 0.5s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  margin: 20px auto;
-  display: block;
+/* Style for video in grid */
+.video-item {
+  position: relative;
 }
 
-.intro-video video:hover {
+.video-item video {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+/* Hover effect */
+.video-item:hover video {
   filter: grayscale(0%);
 }
+
+/* Play button overlay */
+.play-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 50%;
+  font-size: 1.2em;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 10;
+}
+
+/* Optional: change cursor on hover */
+.video-item:hover .play-button {
+  background: rgba(255, 255, 255, 0.85);
+  color: black;
+}
+
