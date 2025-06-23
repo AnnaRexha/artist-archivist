@@ -15,26 +15,22 @@ document.querySelectorAll('.grid-item img').forEach(img => {
   imageObserver.observe(img);
 });
 
-// ==== FLOATING QUOTES SETUP ====
-document.querySelectorAll('.floating-quote').forEach((quote) => {
-  const top = Math.floor(Math.random() * 80) + 10; // 10%–90% viewport height
-  const left = Math.floor(Math.random() * 80) + 10; // 10%–90% viewport width
-  quote.style.top = `${top}%`;
-  quote.style.left = `${left}%`;
 
-  const rotation = Math.floor(Math.random() * 30) - 15; // -15° to +15°
-  quote.style.transform = `rotate(${rotation}deg)`;
-});
+// script.js
 
-// ==== FADE IN QUOTES WHEN SCROLLED INTO VIEW ====
-const quoteObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible'); // Add fade-in class
-    }
+document.addEventListener("DOMContentLoaded", () => {
+  const quotes = document.querySelectorAll(".floating-quote");
+
+  quotes.forEach((quote) => {
+    const top = Math.random() * 90;
+    const left = Math.random() * 90;
+    quote.style.top = `${top}%`;
+    quote.style.left = `${left}%`;
+
+    // Delay to force fade-in
+    setTimeout(() => {
+      quote.classList.add("visible");
+    }, 100);
   });
-}, {
-  threshold: 0.1 // 10% visible
 });
 
-document.querySelectorAll('.floating-quote').forEach(q => quoteObserver.observe(q));
