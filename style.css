@@ -216,3 +216,18 @@ body {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
   z-index: 9999;
 }
+
+/* Video styling similar to images */
+.intro-video video {
+  width: 100%;
+  border-radius: 10px;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin: 20px auto;
+  display: block;
+}
+
+.intro-video video:hover {
+  filter: grayscale(0%);
+}
