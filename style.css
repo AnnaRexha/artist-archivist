@@ -218,41 +218,44 @@ body {
 }
 
 /* Style for video in grid */
-.video-item {
+/* Match video layout with images */
+.video-wrapper {
   position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.video-item video {
+.video-wrapper video {
   width: 100%;
+  height: auto;
   display: block;
-  border-radius: 8px;
   filter: grayscale(100%);
   transition: filter 0.5s ease;
 }
 
-/* Hover effect */
-.video-item:hover video {
+/* Remove grayscale on hover (optional) */
+.video-wrapper:hover video {
   filter: grayscale(0%);
 }
 
-/* Play button overlay */
+/* Play button */
 .play-button {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,0.6);
   color: white;
-  padding: 6px 10px;
-  border-radius: 50%;
-  font-size: 1.2em;
+  border: none;
+  font-size: 1.2rem;
+  padding: 5px 10px;
   cursor: pointer;
-  pointer-events: auto;
+  border-radius: 5px;
   z-index: 10;
 }
 
-/* Optional: change cursor on hover */
-.video-item:hover .play-button {
-  background: rgba(255, 255, 255, 0.85);
-  color: black;
+.play-button:hover {
+  background: rgba(0,0,0,0.8);
 }
+
 
