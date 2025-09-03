@@ -55,10 +55,18 @@ body {
 .grid {
   column-count: 3;
   column-gap: 20px;
-  width: 100%;          /* take full width */
-  margin: 60px 0;       /* remove auto-centering */
+  max-width: 90%;      /* slight frame on the sides */
+  margin: 60px auto;
   padding: 20px;
 }
+
+/* On very large screens, add a column */
+@media (min-width: 1600px) {
+  .grid {
+    column-count: 4;
+  }
+}
+
 
 
 /* Grid items */
