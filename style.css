@@ -1,261 +1,60 @@
-/* Reset styles for everything */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Accessibility helper for screen-reader-only labels */
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
 }
 
-/* Body styles */
-body {
-  background: url('images/background6.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  padding-top: 60px;
-  font-family: 'Georgia', serif;
-  overflow-x: hidden;
+/* Prefer system font for UI text to improve clarity (keep Georgia for long text) */
+.topbar .title, #searchBox, .about-link {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-/* Topbar styles */
-.topbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #333;
-  color: white;
-  padding: 20px 10px;
-  z-index: 1000;
-}
-
-.topbar .navbar {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.topbar .title {
-  font-size: 24px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-#searchBox {
-  padding: 5px 10px;
-  width: 200px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin-top: 10px;
-}
-
-/* Archive Grid - Masonry style */
-.grid {
-  column-count: 3;
-  column-gap: 20px;
-  max-width: 1200px;
-  margin: 60px auto;
-  padding: 20px;
-}
-
-/* Grid items */
-.grid-item {
-  break-inside: avoid;
-  margin-bottom: 20px;
-  display: block;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.grid-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: grayscale(100%);
-  transition: filter 0.5s ease;
-}
-
-.grid-item:hover img {
-  filter: grayscale(0%);
-}
-
-/* Section container */
-.story-section {
-  margin-bottom: 50px;
-  /* Clear column breaks before each section */
-  break-before: column;
-}
-
-/* Section titles */
-.section-title {
-  font-size: 2em;
-  color: white;
-  margin-bottom: 20px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: 'Georgia', serif;
-  text-shadow: 0 0 5px rgba(0,0,0,0.7);
-}
-
-/* Image group inside section (no column styles here!) */
-.image-group {
-  /* no column styles */
-}
-
-/* Floating Quotes Container */
-.floating-quotes {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 5;
-  pointer-events: none;
-}
-
-/* Individual quote */
-.floating-quote {
-  position: absolute;
-  font-size: 1.1rem;
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.75);
-  opacity: 0;
-  transition: opacity 1.5s ease;
-  animation: float 10s ease-in-out infinite alternate;
-}
-
-/* Fade in when visible */
-.floating-quote.visible {
-  opacity: 1;
-}
-
-/* Soft floating animation */
-@keyframes float {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  100% {
-    transform: translateY(-10px) rotate(1deg);
-  }
-}
-
-/* Responsive styles */
+/* Prevent mobile jank from fixed background */
 @media (max-width: 768px) {
-  .topbar .navbar {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #searchBox {
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .grid {
-    column-count: 2;
-  }
-
-  .floating-quote {
-    font-size: 1rem;
+  body {
+    background-attachment: scroll;
   }
 }
 
-@media (max-width: 480px) {
-  .grid {
-    column-count: 1;
-  }
-}
+/* Masonry grid stays (columns approach) */
+.grid { column-count: 3; column-gap: 20px; max-width: 1200px; margin: 80px auto 40px; padding: 20px; }
+@media (max-width: 900px) { .grid { column-count: 2; } }
+@media (max-width: 520px) { .grid { column-count: 1; } }
 
-/* Story page styles (optional, for your story pages) */
-.story-page {
-  max-width: 800px;
-  margin: 80px auto;
-  padding: 20px;
-  background-color: rgba(0,0,0,0.6);
-  color: #fff;
-  border-radius: 10px;
-}
-
-.story-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.story-gallery img {
-  width: calc(50% - 10px);
-  border-radius: 5px;
-}
-
-.story-text {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-.back-button {
-  position: fixed;
-  top: 70px;
-  left: 20px;
-  background: #000;
-  color: #fff;
-  padding: 10px 15px;
-  text-decoration: none;
-  border-radius: 5px;
-  z-index: 999;
-}
-
-.floating-quote {
-  opacity: 1 !important;
-  color: white !important;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
-  z-index: 9999;
-}
-
-/* Style for video in grid */
-/* Match video layout with images */
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  height: auto;
+/* Year separator injected by JS */
+.year-separator {
+  break-inside: avoid;
   display: block;
+  margin: 30px 0 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0,0,0,.6);
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
 }
 
-.video-wrapper video {
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: grayscale(100%);
-  transition: filter 0.5s ease;
+/* Make images/vids keyboard-focusable via the link state */
+.grid-item a:focus-visible,
+.play-button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
 
-/* Remove grayscale on hover (optional) */
-.video-wrapper:hover video {
-  filter: grayscale(0%);
+/* Improve performance on heavy lists */
+.grid-item {
+  content-visibility: auto;
+  contain-intrinsic-size: 600px 800px; /* rough placeholder to reduce layout shift */
 }
 
-/* Play button */
-.play-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: rgba(0,0,0,0.6);
-  color: white;
-  border: none;
-  font-size: 1.2rem;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 5px;
-  z-index: 10;
-}
+/* Quotes: soften overlay Z and avoid blocking UI */
+.floating-quotes { z-index: 3; } /* you had 5/9999 earlier; keep below topbar/buttons */
+.floating-quote { opacity: 0; transition: opacity 1.2s ease; }
 
-.play-button:hover {
-  background: rgba(0,0,0,0.8);
-}
-
-
+/* Video tweaks */
+.video-wrapper { position: relative; display: block; }
+.video-wrapper video { display: block; width: 100%; height: auto; }
+.play-button { position: absolute; top: 10px; right: 10px; }
