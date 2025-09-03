@@ -270,3 +270,29 @@ body {
   text-decoration: underline; /* optional: only underline on hover */
 }
 
+/* About page specific */
+.about-page {
+  background: #000;              /* black background */
+  color: #fff;                   /* white text */
+  font-family: 'Georgia', serif; /* same font as main page */
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 120px auto; /* center horizontally + space from top */
+  padding: 20px;
+  text-align: center; /* center the text */
+}
+
+.about-container h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.about-container p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
