@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Archives — Galerie des Archives</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Topbar (same as your site) -->
+  <header class="topbar">
+    <nav class="navbar" aria-label="Navigation principale">
+      <a href="index.html" class="about-link">Galerie</a>
+      <div class="title">Archives des Histoires</div>
+      <input type="text" id="searchBox" placeholder="Recherche… (titre)" aria-label="Recherche" />
+    </nav>
+  </header>
+
+  <main class="story-list">
+    <!-- Year section -->
+    <h2 class="section-title">2023</h2>
+
+    <!-- Story card: LEFT image, RIGHT text -->
+    <article class="story-card">
+      <a class="story-media" href="stories/story9.html">
+        <img src="images/photo9.jpg" alt="Invisibles — 25 mai 2023" loading="lazy" />
+      </a>
+      <div class="story-meta">
+        <h3 class="story-heading">
+          <a href="stories/story9.html">Invisibles</a>
+        </h3>
+        <p class="story-date">Jeudi 25 mai 2023</p>
+        <p class="story-snippet">
+          J’avais 23 ans quand j’ai découvert que j’étais enceinte… Ma mère, qui a toujours eu une âme généreuse, n’a pas pu se
+          résoudre à le laisser dormir dans la rue. Elle l’a accueilli chez nous, alors même que notre propre situation s’effondrait.
+        </p>
+        <p><a class="story-link" href="stories/story9.html">Lire l’histoire →</a></p>
+      </div>
+    </article>
+
+    <!-- Duplicate thumbnail you had for story 9 (photo41.JPG) as a separate row or remove it -->
+    <article class="story-card">
+      <a class="story-media" href="stories/story9.html">
+        <img src="images/photo41.JPG" alt="Invisibles — autre vignette" loading="lazy" />
+      </a>
+      <div class="story-meta">
+        <h3 class="story-heading"><a href="stories/story9.html">Invisibles (vignette)</a></h3>
+        <p class="story-date">25 mai 2023</p>
+        <p class="story-snippet">Variation visuelle du même récit (autre image de couverture).</p>
+        <p><a class="story-link" href="stories/story9.html">Lire l’histoire →</a></p>
+      </div>
+    </article>
+
+    <!-- Add more stories below (fill in dates/titles/snippets as you like) -->
+    <h2 class="section-title">2022</h2>
+
+    <article class="story-card">
+      <a class="story-media" href="stories/story10.html">
+        <img src="images/photo10.jpg" alt="Titre provisoire — Story 10" loading="lazy" />
+      </a>
+      <div class="story-meta">
+        <h3 class="story-heading"><a href="stories/story10.html">Titre de l’histoire</a></h3>
+        <p class="story-date">Date à compléter</p>
+        <p class="story-snippet">Une courte phrase de contexte pour donner envie d’ouvrir la page.</p>
+        <p><a class="story-link" href="stories/story10.html">Lire l’histoire →</a></p>
+      </div>
+    </article>
+
+    <!-- Example placeholders for the rest; duplicate and edit -->
+    <article class="story-card">
+      <a class="story-media" href="stories/story17.html">
+        <img src="images/photo17.JPG" alt="Story 17 — couverture" loading="lazy" />
+      </a>
+      <div class="story-meta">
+        <h3 class="story-heading"><a href="stories/story17.html">Story 17</a></h3>
+        <p class="story-date">Date à compléter</p>
+        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes max).</p>
+        <p><a class="story-link" href="stories/story17.html">Lire l’histoire →</a></p>
+      </div>
+    </article>
+
+    <!-- Repeat for story18…story31 with their images/links -->
+    <!-- ... -->
+
+  </main>
+
+  <!-- Floating Quotes (same layer; optional on this page) -->
+  <div class="floating-quotes" aria-hidden="true">
+    <div class="floating-quote">« Nous sommes faits de mémoire et d’oubli. »</div>
+    <div class="floating-quote">« Le silence est aussi une archive. »</div>
+    <div class="floating-quote">« Ce qui n’est pas rappelé s’efface. »</div>
+    <div class="floating-quote">« Résister, c’est se souvenir. »</div>
+    <div class="floating-quote">« Vies ordinaires, échos extraordinaires. »</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
