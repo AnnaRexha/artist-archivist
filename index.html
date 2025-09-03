@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,355 +10,158 @@
 
   <!-- Topbar -->
   <header class="topbar">
-    <nav class="navbar" aria-label="Navigation principale">
-      <a href="about.html" class="about-link">À propos</a>
+    <nav class="navbar">
+      <a href="about.html" class="about-link">About</a>
       <div class="title">Galerie des Archives</div>
-      <input type="text" id="searchBox" placeholder="Recherche… (titre, date)" aria-label="Recherche" />
+      <input type="text" id="searchBox" placeholder="Recherche..." />
     </nav>
   </header>
 
-  <main class="story-list">
-    <!-- ===== Example year section: 2023 ===== -->
-    <h2 class="section-title">2023</h2>
-
-    <!-- Story 9 (we know the date/snippet) -->
-    <article class="story-card" data-date="2023-05-25" data-title="Invisibles" data-tags="mémoire,famille,exil">
-      <a class="story-media" href="stories/story9.html">
-        <img src="images/photo9.jpg" alt="Invisibles — 25 mai 2023" loading="lazy" />
+  <!-- Masonry Grid Gallery -->
+  <div class="grid">
+    <div class="grid-item">
+      <a href="stories/story1.html">
+        <img src="images/photo1.jpg" alt="Story 1" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story9.html">Invisibles</a></h3>
-        <p class="story-date">Jeudi 25 mai 2023</p>
-        <p class="story-snippet">
-          J’avais 23 ans quand j’ai découvert que j’étais enceinte… Ma mère, qui a toujours eu une âme généreuse,
-          n’a pas pu se résoudre à le laisser dormir dans la rue. Elle l’a accueilli chez nous, alors même que
-          notre propre situation s’effondrait.
-        </p>
-        <p><a class="story-link" href="stories/story9.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <!-- Optional second vignette for story 9 (photo41.JPG) -->
-    <article class="story-card" data-date="2023-05-25" data-title="Invisibles (vignette)" data-tags="mémoire,famille,exil">
-      <a class="story-media" href="stories/story9.html">
-        <img src="images/photo41.JPG" alt="Invisibles — autre vignette" loading="lazy" />
+    </div>
+    <div class="grid-item">
+      <a href="stories/story2.html">
+        <img src="images/photo2.jpg" alt="Story 2" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story9.html">Invisibles (vignette)</a></h3>
-        <p class="story-date">25 mai 2023</p>
-        <p class="story-snippet">Variation visuelle du même récit (autre image de couverture).</p>
-        <p><a class="story-link" href="stories/story9.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <!-- ===== Other stories (dates/snippets to fill later) ===== -->
-    <h2 class="section-title">Autres</h2>
-
-    <article class="story-card" data-date="" data-title="Story 1">
-      <a class="story-media" href="stories/story1.html">
-        <img src="images/photo1.jpg" alt="Story 1 — couverture" loading="lazy" />
+    </div>
+    <div class="grid-item">
+      <a href="stories/story3.html">
+        <img src="images/photo3.jpg" alt="Story 3" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story1.html">Story 1</a></h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes).</p>
-        <p><a class="story-link" href="stories/story1.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <article class="story-card" data-date="" data-title="Story 2">
-      <a class="story-media" href="stories/story2.html">
-        <img src="images/photo2.jpg" alt="Story 2 — couverture" loading="lazy" />
+    </div>
+    <div class="grid-item">
+      <a href="stories/story4.html">
+        <img src="images/photo4.jpg" alt="Story 4" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story2.html">Story 2</a></h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes).</p>
-        <p><a class="story-link" href="stories/story2.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <article class="story-card" data-date="" data-title="Story 3">
-      <a class="story-media" href="stories/story3.html">
-        <img src="images/photo3.jpg" alt="Story 3 — couverture" loading="lazy" />
+    </div>
+    <div class="grid-item">
+      <a href="stories/story5.html">
+        <img src="images/photo5.jpg" alt="Story 5" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story3.html">Story 3</a></h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes).</p>
-        <p><a class="story-link" href="stories/story3.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <article class="story-card" data-date="" data-title="Story 4">
-      <a class="story-media" href="stories/story4.html">
-        <img src="images/photo4.jpg" alt="Story 4 — couverture" loading="lazy" />
+    </div>
+    <div class="grid-item">
+      <a href="stories/story6.html">
+        <img src="images/photo6.jpg" alt="Story 6" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story4.html">Story 4</a></h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes).</p>
-        <p><a class="story-link" href="stories/story4.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <article class="story-card" data-date="" data-title="Story 5">
-      <a class="story-media" href="stories/story5.html">
-        <img src="images/photo5.jpg" alt="Story 5 — couverture" loading="lazy" />
+    </div>
+    <div class="grid-item">
+      <a href="stories/story7.html">
+        <img src="images/photo7.jpg" alt="Story 7" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story5.html">Story 5</a></h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes).</p>
-        <p><a class="story-link" href="stories/story5.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <article class="story-card" data-date="" data-title="Story 6">
-      <a class="story-media" href="stories/story6.html">
-        <img src="images/photo6.jpg" alt="Story 6 — couverture" loading="lazy" />
+    </div>
+    <div class="grid-item">
+      <a href="stories/story8.html">
+        <img src="images/photo8.jpg" alt="Story 8" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story6.html">Story 6</a></h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes).</p>
-        <p><a class="story-link" href="stories/story6.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <article class="story-card" data-date="" data-title="Story 7">
-      <a class="story-media" href="stories/story7.html">
-        <img src="images/photo7.jpg" alt="Story 7 — couverture" loading="lazy" />
+    </div>
+    <div class="grid-item">
+      <a href="stories/story9.html">
+        <img src="images/photo9.jpg" alt="Story 9" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story7.html">Story 7</a></h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes).</p>
-        <p><a class="story-link" href="stories/story7.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <article class="story-card" data-date="" data-title="Story 8">
-      <a class="story-media" href="stories/story8.html">
-        <img src="images/photo8.jpg" alt="Story 8 — couverture" loading="lazy" />
+    </div>
+    <div class="grid-item">
+      <a href="stories/story10.html">
+        <img src="images/photo10.jpg" alt="Story 10" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story8.html">Story 8</a></h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes).</p>
-        <p><a class="story-link" href="stories/story8.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <article class="story-card" data-date="" data-title="Story 10">
-      <a class="story-media" href="stories/story10.html">
-        <img src="images/photo10.jpg" alt="Story 10 — couverture" loading="lazy" />
+    </div>
+    <div class="grid-item">
+      <a href="stories/story17.html">
+        <img src="images/photo17.JPG" alt="Story 17" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story10.html">Story 10</a></h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes).</p>
-        <p><a class="story-link" href="stories/story10.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <!-- 17–30 -->
-    <article class="story-card" data-date="" data-title="Story 17">
-      <a class="story-media" href="stories/story17.html">
-        <img src="images/photo17.JPG" alt="Story 17 — couverture" loading="lazy" />
+    </div>
+    <div class="grid-item">
+      <a href="stories/story18.html">
+        <img src="images/photo18.JPG" alt="Story 18" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story17.html">Story 17</a></h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes).</p>
-        <p><a class="story-link" href="stories/story17.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <article class="story-card" data-date="" data-title="Story 18">
-      <a class="story-media" href="stories/story18.html">
-        <img src="images/photo18.JPG" alt="Story 18 — couverture" loading="lazy" />
+    </div>
+    <div class="grid-item">
+      <a href="stories/story19.html">
+        <img src="images/photo19.JPG" alt="Story 19" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story18.html">Story 18</a></h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes).</p>
-        <p><a class="story-link" href="stories/story18.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <article class="story-card" data-date="" data-title="Story 19">
-      <a class="story-media" href="stories/story19.html">
-        <img src="images/photo19.JPG" alt="Story 19 — couverture" loading="lazy" />
+    </div>
+    <div class="grid-item">
+      <a href="stories/story20.html">
+        <img src="images/photo20.JPG" alt="Story 20" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story19.html">Story 19</a></h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes).</p>
-        <p><a class="story-link" href="stories/story19.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <article class="story-card" data-date="" data-title="Story 20">
-      <a class="story-media" href="stories/story20.html">
-        <img src="images/photo20.JPG" alt="Story 20 — couverture" loading="lazy" />
+    </div>
+    <div class="grid-item">
+      <a href="stories/story21.html">
+        <img src="images/photo21.JPG" alt="Story 21" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story20.html">Story 20</a></h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes).</p>
-        <p><a class="story-link" href="stories/story20.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <article class="story-card" data-date="" data-title="Story 21">
-      <a class="story-media" href="stories/story21.html">
-        <img src="images/photo21.JPG" alt="Story 21 — couverture" loading="lazy" />
+    </div>
+    <div class="grid-item">
+      <a href="stories/story22.html">
+        <img src="images/photo22.JPG" alt="Story 22" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story21.html">Story 21</a></h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes).</p>
-        <p><a class="story-link" href="stories/story21.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <article class="story-card" data-date="" data-title="Story 22">
-      <a class="story-media" href="stories/story22.html">
-        <img src="images/photo22.JPG" alt="Story 22 — couverture" loading="lazy" />
+    </div>
+    <div class="grid-item">
+      <a href="stories/story23.html">
+        <img src="images/photo23.JPG" alt="Story 23" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story22.html">Story 22</a></h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes).</p>
-        <p><a class="story-link" href="stories/story22.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <article class="story-card" data-date="" data-title="Story 23">
-      <a class="story-media" href="stories/story23.html">
-        <img src="images/photo23.JPG" alt="Story 23 — couverture" loading="lazy" />
+    </div>
+    <div class="grid-item">
+      <a href="stories/story24.html">
+        <img src="images/photo24.JPG" alt="Story 24" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story23.html">Story 23</a></h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes).</p>
-        <p><a class="story-link" href="stories/story23.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <article class="story-card" data-date="" data-title="Story 24">
-      <a class="story-media" href="stories/story24.html">
-        <img src="images/photo24.JPG" alt="Story 24 — couverture" loading="lazy" />
+    </div>
+    <div class="grid-item">
+      <a href="stories/story25.html">
+        <img src="images/photo25.JPG" alt="Story 25" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story24.html">Story 24</a></h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes).</p>
-        <p><a class="story-link" href="stories/story24.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <article class="story-card" data-date="" data-title="Story 25">
-      <a class="story-media" href="stories/story25.html">
-        <img src="images/photo25.JPG" alt="Story 25 — couverture" loading="lazy" />
+    </div>
+    <div class="grid-item">
+      <a href="stories/story26.html">
+        <img src="images/photo26.JPG" alt="Story 26" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story25.html">Story 25</a></h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes).</p>
-        <p><a class="story-link" href="stories/story25.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <article class="story-card" data-date="" data-title="Story 26">
-      <a class="story-media" href="stories/story26.html">
-        <img src="images/photo26.JPG" alt="Story 26 — couverture" loading="lazy" />
+    </div>
+    <div class="grid-item">
+      <a href="stories/story27.html">
+        <img src="images/photo27.JPG" alt="Story 27" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story26.html">Story 26</a></h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes).</p>
-        <p><a class="story-link" href="stories/story26.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <article class="story-card" data-date="" data-title="Story 27">
-      <a class="story-media" href="stories/story27.html">
-        <img src="images/photo27.JPG" alt="Story 27 — couverture" loading="lazy" />
+    </div>
+    <div class="grid-item">
+      <a href="stories/story28.html">
+        <img src="images/photo28.JPG" alt="Story 28" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story27.html">Story 27</a></h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes).</p>
-        <p><a class="story-link" href="stories/story27.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <article class="story-card" data-date="" data-title="Story 28">
-      <a class="story-media" href="stories/story28.html">
-        <img src="images/photo28.JPG" alt="Story 28 — couverture" loading="lazy" />
+    </div>
+    <div class="grid-item">
+      <a href="stories/story29.html">
+        <img src="images/photo29.JPG" alt="Story 29" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story28.html">Story 28</a></h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes).</p>
-        <p><a class="story-link" href="stories/story28.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <article class="story-card" data-date="" data-title="Story 29">
-      <a class="story-media" href="stories/story29.html">
-        <img src="images/photo29.JPG" alt="Story 29 — couverture" loading="lazy" />
+    </div>
+    <div class="grid-item">
+      <a href="stories/story30.html">
+        <img src="images/photo30.JPG" alt="Story 30" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story29.html">Story 29</a></h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes).</p>
-        <p><a class="story-link" href="stories/story29.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <article class="story-card" data-date="" data-title="Story 30">
-      <a class="story-media" href="stories/story30.html">
-        <img src="images/photo30.JPG" alt="Story 30 — couverture" loading="lazy" />
+    </div>
+    <div class="grid-item">
+      <a href="stories/story31.html">
+        <img src="images/photo31.jpg" alt="Story 3" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story30.html">Story 30</a></h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes).</p>
-        <p><a class="story-link" href="stories/story30.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
-
-    <article class="story-card" data-date="" data-title="Story 31">
-      <a class="story-media" href="stories/story31.html">
-        <img src="images/photo31.jpg" alt="Story 31 — couverture" loading="lazy" />
+    </div>
+     <div class="grid-item">
+      <a href="stories/story9.html">
+        <img src="images/photo41.JPG" alt="Story 9" />
       </a>
-      <div class="story-meta">
-        <h3 class="story-heading"><a href="stories/story31.html">Story 31</a></h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Bref extrait ou résumé (2–3 lignes).</p>
-        <p><a class="story-link" href="stories/story31.html">Lire l’histoire →</a></p>
-      </div>
-    </article>
+    </div>
+  </div>
 
-    <!-- Video row (optional) -->
-    <article class="story-card" data-date="" data-title="Vidéo de l’archive" data-tags="vidéo">
-      <div class="story-media">
-        <div class="video-wrapper">
-          <video src="videos/video2.mp4" preload="metadata" playsinline muted controls poster="images/video2-poster.jpg"></video>
-          <button class="play-button" aria-label="Lire/mettre en pause la vidéo" aria-pressed="false">▶</button>
-        </div>
-      </div>
-      <div class="story-meta">
-        <h3 class="story-heading">Vidéo de l’archive</h3>
-        <p class="story-date">Date à compléter</p>
-        <p class="story-snippet">Une pièce vidéo liée au projet (ajouter un court contexte ici).</p>
-      </div>
-    </article>
 
-  </main>
+  
+  
+  <!-- ✨ Add video here -->
+<div class="grid-item video-item">
+  <div class="video-wrapper">
+    <video src="videos/video2.mp4" muted></video>
+    <button class="play-button">▶</button>
+  </div>
+</div>
+
 
   <script src="script.js"></script>
 </body>
