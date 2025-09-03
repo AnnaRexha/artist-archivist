@@ -259,3 +259,14 @@ body {
   background: rgba(0,0,0,0.8);
 }
 
+/* Style the About link in the topbar */
+.about-link {
+  color: #fff;             /* make text white */
+  text-decoration: none;   /* remove underline */
+  font-weight: bold;       /* optional: make it stand out */
+}
+
+.about-link:hover {
+  text-decoration: underline; /* optional: only underline on hover */
+}
+
