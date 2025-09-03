@@ -1,174 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fragments du Silence</title>
+  <title>Fragments du Silence — Galerie des Archives</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Topbar -->
   <header class="topbar">
-    <nav class="navbar">
-      <a href="about.html" class="about-link">About</a>
+    <nav class="navbar" aria-label="Navigation principale">
+      <a href="about.html" class="about-link">À propos</a>
       <div class="title">Galerie des Archives</div>
-      <input type="text" id="searchBox" placeholder="Recherche..." />
+
+      <label for="searchBox" class="sr-only">Recherche</label>
+      <input type="text" id="searchBox" placeholder="Recherche… (titre, tags)" />
     </nav>
   </header>
 
-  <!-- Masonry Grid Gallery -->
-  <div class="grid">
-    <div class="grid-item">
-      <a href="stories/story1.html">
-        <img src="images/photo1.jpg" alt="Story 1" />
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="stories/story2.html">
-        <img src="images/photo2.jpg" alt="Story 2" />
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="stories/story3.html">
-        <img src="images/photo3.jpg" alt="Story 3" />
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="stories/story4.html">
-        <img src="images/photo4.jpg" alt="Story 4" />
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="stories/story5.html">
-        <img src="images/photo5.jpg" alt="Story 5" />
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="stories/story6.html">
-        <img src="images/photo6.jpg" alt="Story 6" />
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="stories/story7.html">
-        <img src="images/photo7.jpg" alt="Story 7" />
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="stories/story8.html">
-        <img src="images/photo8.jpg" alt="Story 8" />
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="stories/story9.html">
-        <img src="images/photo9.jpg" alt="Story 9" />
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="stories/story10.html">
-        <img src="images/photo10.jpg" alt="Story 10" />
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="stories/story17.html">
-        <img src="images/photo17.JPG" alt="Story 17" />
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="stories/story18.html">
-        <img src="images/photo18.JPG" alt="Story 18" />
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="stories/story19.html">
-        <img src="images/photo19.JPG" alt="Story 19" />
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="stories/story20.html">
-        <img src="images/photo20.JPG" alt="Story 20" />
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="stories/story21.html">
-        <img src="images/photo21.JPG" alt="Story 21" />
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="stories/story22.html">
-        <img src="images/photo22.JPG" alt="Story 22" />
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="stories/story23.html">
-        <img src="images/photo23.JPG" alt="Story 23" />
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="stories/story24.html">
-        <img src="images/photo24.JPG" alt="Story 24" />
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="stories/story25.html">
-        <img src="images/photo25.JPG" alt="Story 25" />
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="stories/story26.html">
-        <img src="images/photo26.JPG" alt="Story 26" />
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="stories/story27.html">
-        <img src="images/photo27.JPG" alt="Story 27" />
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="stories/story28.html">
-        <img src="images/photo28.JPG" alt="Story 28" />
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="stories/story29.html">
-        <img src="images/photo29.JPG" alt="Story 29" />
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="stories/story30.html">
-        <img src="images/photo30.JPG" alt="Story 30" />
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="stories/story31.html">
-        <img src="images/photo31.jpg" alt="Story 3" />
-      </a>
-    </div>
-     <div class="grid-item">
-      <a href="stories/story9.html">
-        <img src="images/photo41.JPG" alt="Story 9" />
-      </a>
-    </div>
-  </div>
+  <main>
+    <!-- Masonry Grid -->
+    <div class="grid" id="archiveGrid">
 
+      <!-- Example card: add data-date (YYYY-MM-DD), data-title, data-tags -->
+      <div class="grid-item"
+           data-date="2023-05-25"
+           data-title="Invisibles"
+           data-tags="mémoire,famille,exil">
+        <a href="stories/story9.html">
+          <img src="images/photo9.jpg"
+               alt="Invisibles — 25 mai 2023"
+               loading="lazy"
+               width="600" height="800" />
+        </a>
+      </div>
 
-  
-  
-  <!-- ✨ Add video here -->
-<div class="grid-item video-item">
-  <div class="video-wrapper">
-    <video src="videos/video2.mp4" muted></video>
-    <button class="play-button">▶</button>
-  </div>
-</div>
+      <!-- …repeat for all items… make sure each has a valid data-date -->
 
-  <!-- Floating Quotes Section -->
-  <div class="floating-quotes">
-    <div class="floating-quote">“We are made of memory and forgetting.”</div>
-    <div class="floating-quote">“Silence is a kind of archive too.”</div>
-    <div class="floating-quote">“What is not remembered vanishes.”</div>
-    <div class="floating-quote">“To resist is to remember.”</div>
-    <div class="floating-quote">“Ordinary lives, extraordinary echoes.”</div>
+      <!-- Video INSIDE the grid -->
+      <div class="grid-item video-item"
+           data-date="2023-06-12"
+           data-title="Vidéo de l’archive"
+           data-tags="vidéo,mémoire">
+        <div class="video-wrapper">
+          <video src="videos/video2.mp4"
+                 preload="metadata"
+                 playsinline
+                 muted
+                 controls
+                 poster="images/video2-poster.jpg"></video>
+          <button class="play-button"
+                  aria-label="Lire/mettre en pause la vidéo"
+                  aria-pressed="false">▶</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Year separators will be injected by JS -->
+  </main>
+
+  <!-- Floating Quotes -->
+  <div class="floating-quotes" aria-hidden="true">
+    <div class="floating-quote">« Nous sommes faits de mémoire et d’oubli. »</div>
+    <div class="floating-quote">« Le silence est aussi une archive. »</div>
+    <div class="floating-quote">« Ce qui n’est pas rappelé s’efface. »</div>
+    <div class="floating-quote">« Résister, c’est se souvenir. »</div>
+    <div class="floating-quote">« Vies ordinaires, échos extraordinaires. »</div>
   </div>
 
   <script src="script.js"></script>
